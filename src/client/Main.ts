@@ -15,8 +15,6 @@ import { GameEnv } from "../core/configuration/Config";
 import { GameType } from "../core/game/Game";
 import { UserSettings } from "../core/game/UserSettings";
 import "./AccountModal";
-import { adGatekeeper } from "./AdGatekeeper";
-import { loadAdmiral, onAdmiralMeasured } from "./Admiral";
 import { getUserMe, invalidateUserMe } from "./Api";
 import { reauthAfterCrazyGamesChange, userAuth } from "./Auth";
 import "./ClanModal";
@@ -27,18 +25,12 @@ import {
 } from "./Cosmetics";
 import { updateCrazyGamesNavButton } from "./CrazyGamesAccountButton";
 import { crazyGamesSDK } from "./CrazyGamesSDK";
-import {
-  composeVersionDisplay,
-  desktopVersion,
-  isDesktopShell,
-} from "./DesktopShell";
-import "./FeaturedStream";
+import { composeVersionDisplay, desktopVersion } from "./DesktopShell";
 import "./GameModeSelector";
 import { GameModeSelector } from "./GameModeSelector";
 import { GameStartingModal } from "./GameStartingModal";
 import "./GameStatsModal";
 import { HelpModal } from "./HelpModal";
-import "./HomepagePromos";
 import { HostLobbyModal as HostPrivateLobbyModal } from "./HostLobbyModal";
 import { showInGameConfirm } from "./InGameModal";
 import "./InventoryModal";
@@ -100,46 +92,6 @@ import "./styles/modal/chat.css";
 declare global {
   interface Window {
     turnstile: any;
-    adsEnabled: boolean;
-    gtag?: (...args: any[]) => void;
-    PageOS: {
-      session: {
-        newPageView: () => void;
-      };
-    };
-    ramp: {
-      que: Array<() => void>;
-      passiveMode: boolean;
-      spaAddAds: (ads: Array<{ type: string; selectorId?: string }>) => void;
-      destroyUnits: (adType: string | string[]) => Promise<void>;
-      settings?: {
-        slots?: any;
-      };
-      spaNewPage: (url?: string) => void;
-      spaAds: (config?: {
-        ads?: Array<{ type: string; selectorId?: string }>;
-        countPageview?: boolean;
-        path?: string;
-      }) => void;
-      // Video ad methods
-      onPlayerReady: (() => void) | null;
-      addUnits: (units: Array<{ type: string }>) => Promise<void>;
-      displayUnits: () => void;
-    };
-    Bolt: {
-      on: (unitType: string, event: string, callback: () => void) => void;
-      BOLT_AD_REQUEST_START: string;
-      BOLT_AD_IMPRESSION: string;
-      BOLT_AD_STARTED: string;
-      BOLT_FIRST_QUARTILE: string;
-      BOLT_MIDPOINT: string;
-      BOLT_THIRD_QUARTILE: string;
-      BOLT_AD_COMPLETE: string;
-      BOLT_AD_ERROR: string;
-      BOLT_AD_PAUSED: string;
-      BOLT_AD_CLICKED: string;
-      SHOW_HIDDEN_CONTAINER: string;
-    };
     currentPageId?: string;
     showPage?: (pageId: string) => void;
   }
@@ -403,26 +355,6 @@ class Client {
         void updateCrazyGamesNavButton();
       } else {
         updateAccountNavButton(userMeResponse);
-      }
-      const isAdFree =
-        userMeResponse !== false && userMeResponse.player?.adfree === true;
-      window.adsEnabled =
-        !isAdFree && !crazyGamesSDK.isOnCrazyGames() && !isDesktopShell();
-      // Ad-eligible users only: paid/adfree users must never load Admiral (its
-      // adblock popup fires autonomously once the payload runs). Start watching
-      // adblock state; once a blocker is ever detected the in-game ad is
-      // suppressed forever (persisted) — those users are highly ad-sensitive.
-      if (window.adsEnabled) {
-        loadAdmiral();
-        // Admiral's read is more reliable than our DOM bait, so use it as a
-        // fast initial signal. A blocker that whitelists this site still shows
-        // ads, so "blocked" means adblocking AND not whitelisted.
-        onAdmiralMeasured((res) => {
-          adGatekeeper.seed(
-            res.adblocking === true && res.whitelisted !== true,
-          );
-        });
-        adGatekeeper.start();
       }
       document.dispatchEvent(
         new CustomEvent("userMeResponse", {
@@ -903,7 +835,7 @@ class Client {
 
     this.lobbyHandle.prestart.then(() => {
       // The game is actually starting now (lobby wait is over). Let listeners that stay up
-      // through the wait (e.g. the featured-stream panel) hide at this point instead of on join.
+      // through the wait hide at this point instead of on join.
       document.dispatchEvent(new CustomEvent("game-starting"));
       console.log("Closing modals");
       document.getElementById("settings-button")?.classList.add("hidden");
@@ -941,7 +873,6 @@ class Client {
         "matchmaking-modal",
         "clan-modal",
         "lang-selector",
-        "homepage-promos",
       ].forEach((tag) => {
         const modal = document.querySelector(tag) as HTMLElement & {
           close?: () => void;
@@ -954,9 +885,6 @@ class Client {
         }
       });
       this.gameModeSelector.stop();
-      document.querySelectorAll(".ad").forEach((ad) => {
-        (ad as HTMLElement).style.display = "none";
-      });
 
       crazyGamesSDK.loadingStart();
 
@@ -974,13 +902,6 @@ class Client {
       this.gameModeSelector.stop();
       incrementGamesPlayed();
 
-      document.querySelectorAll(".ad").forEach((ad) => {
-        (ad as HTMLElement).style.display = "none";
-      });
-
-      if (window.PageOS?.session?.newPageView) {
-        window.PageOS.session.newPageView();
-      }
       crazyGamesSDK.loadingStop();
       crazyGamesSDK.gameplayStart();
       document.body.classList.add("in-game");

@@ -16,7 +16,10 @@ import {
 } from "../InputHandler";
 import { MapRenderer } from "../render/gl";
 import { TransformHandler } from "../TransformHandler";
-import { MoveWarshipIntentEvent } from "../Transport";
+import {
+  MoveWarshipIntentEvent,
+  SubmarineTargetIntentEvent,
+} from "../Transport";
 import { GameView, UnitView } from "../view";
 
 const WARSHIP_SELECTION_RADIUS = 10;
@@ -160,6 +163,51 @@ export class WarshipSelectionController implements Controller {
   }
 
   /**
+   * Find player-owned submarines near the given cell, sorted by distance.
+   */
+  private findSubmarinesNearCell(clickRef: TileRef): UnitView[] {
+    const myPlayer = this.game.myPlayer();
+    if (!myPlayer) return [];
+    return this.game
+      .units(UnitType.Submarine)
+      .filter(
+        (unit) =>
+          unit.isActive() &&
+          unit.owner() === myPlayer &&
+          this.game.manhattanDist(unit.tile(), clickRef) <=
+            WARSHIP_SELECTION_RADIUS,
+      )
+      .sort(
+        (a, b) =>
+          this.game.manhattanDist(a.tile(), clickRef) -
+          this.game.manhattanDist(b.tile(), clickRef),
+      );
+  }
+
+  /**
+   * Find enemy warships near the given cell (kamikaze targets), sorted by
+   * distance. Own warships are excluded.
+   */
+  private findEnemyWarshipsNearCell(clickRef: TileRef): UnitView[] {
+    const myPlayer = this.game.myPlayer();
+    if (!myPlayer) return [];
+    return this.game
+      .units(UnitType.Warship)
+      .filter(
+        (unit) =>
+          unit.isActive() &&
+          unit.owner() !== myPlayer &&
+          this.game.manhattanDist(unit.tile(), clickRef) <=
+            WARSHIP_SELECTION_RADIUS,
+      )
+      .sort(
+        (a, b) =>
+          this.game.manhattanDist(a.tile(), clickRef) -
+          this.game.manhattanDist(b.tile(), clickRef),
+      );
+  }
+
+  /**
    * Resolve a left-click in the world:
    *  - multi-selected warships present + clicked water → move them all
    *  - single selected warship + clicked water → move it, then deselect
@@ -194,6 +242,17 @@ export class WarshipSelectionController implements Controller {
     }
 
     if (this.selectedUnit) {
+      // A selected submarine clicked on an enemy warship is a kamikaze order.
+      if (this.selectedUnit.type() === UnitType.Submarine) {
+        const target = this.findEnemyWarshipsNearCell(clickRef)[0];
+        if (target) {
+          this.eventBus.emit(
+            new SubmarineTargetIntentEvent(this.selectedUnit.id(), target.id()),
+          );
+          this.eventBus.emit(new UnitSelectionEvent(this.selectedUnit, false));
+          return;
+        }
+      }
       this.eventBus.emit(
         new MoveWarshipIntentEvent([this.selectedUnit.id()], clickRef),
       );
@@ -204,6 +263,11 @@ export class WarshipSelectionController implements Controller {
     nearbyWarships ??= this.findWarshipsNearCell(clickRef);
     if (nearbyWarships.length > 0) {
       this.eventBus.emit(new UnitSelectionEvent(nearbyWarships[0], true));
+      return;
+    }
+    const nearbySubmarines = this.findSubmarinesNearCell(clickRef);
+    if (nearbySubmarines.length > 0) {
+      this.eventBus.emit(new UnitSelectionEvent(nearbySubmarines[0], true));
     }
   }
 
@@ -233,13 +297,11 @@ export class WarshipSelectionController implements Controller {
       this.onMouseUp(new MouseUpEvent(event.x, event.y), clickRef);
       return;
     }
-    const nearbyWarships = this.findWarshipsNearCell(clickRef);
-    if (nearbyWarships.length > 0) {
-      this.onMouseUp(
-        new MouseUpEvent(event.x, event.y),
-        clickRef,
-        nearbyWarships,
-      );
+    const hasShipNearby =
+      this.findWarshipsNearCell(clickRef).length > 0 ||
+      this.findSubmarinesNearCell(clickRef).length > 0;
+    if (hasShipNearby) {
+      this.onMouseUp(new MouseUpEvent(event.x, event.y), clickRef);
     } else {
       this.eventBus.emit(new ContextMenuEvent(event.x, event.y));
     }

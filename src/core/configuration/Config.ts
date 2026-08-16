@@ -375,6 +375,15 @@ export class Config {
           maxHealth: 1000,
         };
         break;
+      case UnitType.Submarine:
+        info = {
+          cost: this.costWrapper(
+            (numUnits: number) => Math.min(1_000_000, (numUnits + 1) * 200_000),
+            UnitType.Submarine,
+          ),
+          maxHealth: 800,
+        };
+        break;
       case UnitType.Shell:
         info = {
           cost: () => 0n,
@@ -1030,6 +1039,23 @@ export class Config {
 
   warshipPortSwitchThreshold(): number {
     return 0.75;
+  }
+
+  // --- Submarine ---
+
+  submarinePatrolRange(): number {
+    return 100;
+  }
+
+  /** Range at which a submarine auto-hunts (or can be manually sent against)
+   *  an enemy warship. */
+  submarineTargettingRange(): number {
+    return 150;
+  }
+
+  /** Tiles a submarine moves per tick (warships move 1, so this is "faster"). */
+  submarineMovePerTick(): number {
+    return 2;
   }
 
   // --- Warship veterancy ---

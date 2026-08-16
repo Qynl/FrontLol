@@ -127,11 +127,13 @@
       "missile_silo": "Used to launch nukes",
       "port": "Sends trade ships to generate gold",
       "sam_launcher": "Defends against incoming nukes",
+      "submarine": "Crashes into a targeted warship, sinking both",
       "warship": "Captures trade ships, destroys ships and boats"
     },
     "not_enough_money": "Not enough money",
     "upgrade_amount": "x{amount}",
-    "warship_shift_hint": "Hold Shift and drag to select multiple warships at once"
+    "warship_shift_hint": "Hold Shift and drag to select multiple warships at once",
+    "water_troops": "Water Troops"
   },
   "chat": {
     "attack": {
@@ -553,13 +555,6 @@
     "unit_destroyed": "Your {unit} was destroyed",
     "unit_voluntarily_deleted": "Unit voluntarily deleted",
     "wants_to_renew_alliance": "{name} wants to renew your alliance"
-  },
-  "featured_stream": {
-    "expand": "Expand",
-    "hide_today": "Hide for today",
-    "live": "LIVE",
-    "minimize": "Minimize",
-    "open_on_twitch": "Open {channel} on Twitch"
   },
   "friends": {
     "accept": "Accept",
@@ -1556,12 +1551,6 @@
     "avatar_alt": "Steam avatar",
     "default_name": "Steam player"
   },
-  "steam_wishlist": {
-    "cta": "Wishlist now",
-    "on_steam": "OpenFront on Steam",
-    "release": "Available Q3 2026",
-    "title": "Wishlist OpenFront on Steam!"
-  },
   "store": {
     "already_subscribed": "Already subscribed.",
     "change_tier_failed": "Couldn't update your subscription. Please try again.",
@@ -1708,6 +1697,7 @@
     "missile_silo": "Missile Silo",
     "port": "Port",
     "sam_launcher": "SAM Launcher",
+    "submarine": "Submarine",
     "warship": "Warship"
   },
   "user_setting": {

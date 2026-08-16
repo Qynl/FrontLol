@@ -26,25 +26,6 @@
         padding-left: env(safe-area-inset-left);
       }
 
-      /* Prevent Playwire bottom rail from affecting flex layout,
-         and keep it below the bottom HUD (z-[200]) so it can't cover the control panel */
-      [id^="pw-oop-bottom_rail"] {
-        position: fixed !important;
-        z-index: 150 !important;
-      }
-
-      /* Google Funding Choices CCPA link override */
-      .fc-dns-link,
-      .fc-ccpa-root,
-      .fc-consent-root {
-        position: fixed !important;
-        z-index: 999999 !important;
-      }
-      .fc-dns-link {
-        bottom: 15px !important;
-        left: 15px !important;
-      }
-
       /* Ensure full viewport height on iOS */
       html,
       body {
@@ -118,48 +99,6 @@
       defer
     ></script>
 
-    <script data-cfasync="false">
-      window.ramp = window.ramp || {};
-      window.ramp.que = window.ramp.que || [];
-      window.ramp.passiveMode = true;
-    </script>
-
-    <script>
-      window.googletag = window.googletag || { cmd: [] };
-      googletag.cmd.push(function () {
-        googletag.pubads().set("page_url", "http://openfront.io ");
-      });
-    </script>
-
-    <!-- Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-16702609763"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-
-      gtag("js", new Date());
-      gtag("config", "AW-16702609763");
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-WQGQQ8RDN4"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-WQGQQ8RDN4");
-    </script>
   </head>
 
   <body
@@ -212,7 +151,6 @@
         class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-99999"
       ></div>
 
-      <homepage-promos></homepage-promos>
       <banned-modal></banned-modal>
       <marketing-consent-toast></marketing-consent-toast>
 
@@ -375,7 +313,6 @@
     <player-panel></player-panel>
     <spawn-timer></spawn-timer>
     <immunity-timer></immunity-timer>
-    <in-game-promo></in-game-promo>
     <alert-frame></alert-frame>
     <chat-modal></chat-modal>
     <multi-tab-modal></multi-tab-modal>
@@ -383,12 +320,6 @@
     <performance-overlay></performance-overlay>
     <player-info-overlay></player-info-overlay>
     <heads-up-message></heads-up-message>
-
-    <!-- Featured stream: direct <body> child (NOT inside the in-[.in-game]:hidden
-         home container) so the Twitch iframe is never display:none'd during a game,
-         which would unmount the player and break ToS-compliant playback. The
-         component is position:fixed and self-manages visibility (pauses in-game). -->
-    <featured-stream></featured-stream>
 
     <!-- Scripts -->
     <script>
@@ -467,19 +398,6 @@
       });
     </script>
 
-    <!-- Analytics -->
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "03d93e6fefb349c28ee69b408fa25a13"}'
-    ></script>
     <script type="module" src="/src/client/Main.ts"></script>
-    <footer>
-      <script
-        data-cfasync="false"
-        async
-        src="//cdn.intergient.com/1025558/75940/ramp.js"
-      ></script>
-    </footer>
   </body>
 </html>

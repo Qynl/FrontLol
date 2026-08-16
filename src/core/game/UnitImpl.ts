@@ -4,6 +4,7 @@ import {
   MessageType,
   NukeState,
   Player,
+  SubmarineState,
   Tick,
   TrainType,
   TrajectoryTile,
@@ -27,6 +28,7 @@ export class UnitImpl implements Unit {
   private _lastTile: TileRef;
   private _transportShipState: TransportShipState | undefined = undefined;
   private _warshipState: WarshipState | undefined = undefined;
+  private _submarineState: SubmarineState | undefined = undefined;
   private _nukeState: NukeState | undefined = undefined;
   private _reachedTarget = false;
   private _wasDestroyedByEnemy: boolean = false;
@@ -74,13 +76,20 @@ export class UnitImpl implements Unit {
       this._transportShipState = { isRetreating: false, troops: 0 };
     }
     if ("patrolTile" in params) {
-      this._warshipState = {
-        state: "patrolling",
-        patrolTile: params.patrolTile,
-        lastCombatTick: -100,
-        veterancy: 0,
-        veterancyProgress: 0,
-      };
+      if (this._type === UnitType.Submarine) {
+        this._submarineState = {
+          state: "patrolling",
+          patrolTile: params.patrolTile,
+        };
+      } else {
+        this._warshipState = {
+          state: "patrolling",
+          patrolTile: params.patrolTile,
+          lastCombatTick: -100,
+          veterancy: 0,
+          veterancyProgress: 0,
+        };
+      }
     }
     this._targetUnit =
       "targetUnit" in params ? (params.targetUnit ?? undefined) : undefined;
@@ -90,6 +99,7 @@ export class UnitImpl implements Unit {
 
     switch (this._type) {
       case UnitType.Warship:
+      case UnitType.Submarine:
       case UnitType.Port:
       case UnitType.MissileSilo:
       case UnitType.DefensePost:
@@ -142,6 +152,10 @@ export class UnitImpl implements Unit {
       warshipState:
         this._warshipState !== undefined
           ? { ...this.warshipState() }
+          : undefined,
+      submarineState:
+        this._submarineState !== undefined
+          ? { ...this.submarineState() }
           : undefined,
       transportShipState:
         this._transportShipState !== undefined
@@ -381,6 +395,35 @@ export class UnitImpl implements Unit {
     }
     this._warshipState.isInCombat = this.isInCombat();
     return this._warshipState;
+  }
+
+  submarineState(): SubmarineState {
+    if (this._submarineState === undefined) {
+      throw new Error("submarineState called on non-submarine unit");
+    }
+    return this._submarineState;
+  }
+
+  updateSubmarineState(update: Partial<SubmarineState>): void {
+    if (this._submarineState === undefined) {
+      throw new Error("updateSubmarineState called on non-submarine unit");
+    }
+    const merged = { ...this._submarineState, ...update };
+    if (
+      merged.state === this._submarineState.state &&
+      merged.patrolTile === this._submarineState.patrolTile &&
+      merged.kamikazeTargetId === this._submarineState.kamikazeTargetId &&
+      merged.isInCombat === this._submarineState.isInCombat
+    ) {
+      return;
+    }
+    this._submarineState = {
+      state: merged.state,
+      patrolTile: merged.patrolTile,
+      kamikazeTargetId: merged.kamikazeTargetId,
+      isInCombat: merged.isInCombat,
+    };
+    this.mg.addUpdate(this.toUpdate());
   }
 
   updateWarshipState(update: Partial<WarshipState>): void {

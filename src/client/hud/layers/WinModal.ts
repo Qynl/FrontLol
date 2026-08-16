@@ -13,7 +13,6 @@ import { getUserMe } from "../../Api";
 import "../../components/CosmeticCard";
 import { cosmeticSelectionLabel } from "../../components/CosmeticPresentation";
 import "../../components/PurchaseButton";
-import "../../components/SteamWishlist";
 import { Controller } from "../../Controller";
 import {
   fetchCosmetics,
@@ -21,7 +20,6 @@ import {
   resolveCosmetics,
 } from "../../Cosmetics";
 import { crazyGamesSDK } from "../../CrazyGamesSDK";
-import { steamSDK } from "../../SteamSDK";
 import { SendWinnerEvent } from "../../Transport";
 import { GameView } from "../../view";
 
@@ -111,20 +109,14 @@ export class WinModal extends LitElement implements Controller {
   }
 
   innerHtml() {
-    // The Steam desktop build has nothing to wishlist — fall through to the
-    // other promos so the box is never empty.
-    const canWishlist = !steamSDK.isOnSteam();
-
     if (isInIframe()) {
-      return canWishlist ? this.steamWishlist() : this.discordDisplay();
+      return this.discordDisplay();
     }
 
     if (!this.isWin && getGamesPlayed() < 3) {
       return this.renderYoutubeTutorial();
     }
-    if (this.rand < 0.25 && canWishlist) {
-      return this.steamWishlist();
-    } else if (this.rand < 0.5) {
+    if (this.rand < 0.5) {
       return this.discordDisplay();
     } else {
       return this.renderPatternButton();
@@ -211,20 +203,6 @@ export class WinModal extends LitElement implements Controller {
             </div>
           `,
         )}
-      </div>
-    `;
-  }
-
-  steamWishlist(): TemplateResult {
-    return html`
-      <div class="text-center mb-6 bg-black/30 p-2.5 rounded-sm">
-        <h3 class="text-xl font-semibold text-white mb-3">
-          ${translateText("steam_wishlist.title")}
-        </h3>
-        <steam-wishlist
-          campaign="win_modal"
-          .active=${this.isVisible}
-        ></steam-wishlist>
       </div>
     `;
   }

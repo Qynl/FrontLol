@@ -181,6 +181,13 @@ export class MoveWarshipIntentEvent implements GameEvent {
   ) {}
 }
 
+export class SubmarineTargetIntentEvent implements GameEvent {
+  constructor(
+    public readonly unitId: number,
+    public readonly targetUnitId: number,
+  ) {}
+}
+
 export class SendKickPlayerIntentEvent implements GameEvent {
   constructor(public readonly target: string) {}
 }
@@ -270,6 +277,9 @@ export class Transport {
 
     this.eventBus.on(MoveWarshipIntentEvent, (e) => {
       this.onMoveWarshipEvent(e);
+    });
+    this.eventBus.on(SubmarineTargetIntentEvent, (e) => {
+      this.onSubmarineTargetEvent(e);
     });
 
     this.eventBus.on(SendDeleteUnitIntentEvent, (e) =>
@@ -657,6 +667,14 @@ export class Transport {
       type: "move_warship",
       unitIds: event.unitIds,
       tile: event.tile,
+    });
+  }
+
+  private onSubmarineTargetEvent(event: SubmarineTargetIntentEvent) {
+    this.sendIntent({
+      type: "submarine_target",
+      unitId: event.unitId,
+      targetUnitId: event.targetUnitId,
     });
   }
 

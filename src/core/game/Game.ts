@@ -44,6 +44,14 @@ export type TransportShipState = {
   troops: number;
 };
 
+export type SubmarineState = {
+  state: "patrolling" | "hunting";
+  patrolTile?: TileRef;
+  // Enemy warship the submarine is kamikaze-hunting (manual override).
+  kamikazeTargetId?: number;
+  isInCombat?: boolean;
+};
+
 export type NukeState = {
   trajectory: TrajectoryTile[];
   trajectoryIndex: number;
@@ -186,6 +194,7 @@ function unitTypeGroup<T extends readonly UnitType[]>(types: T) {
 export enum UnitType {
   TransportShip = "Transport",
   Warship = "Warship",
+  Submarine = "Submarine",
   Shell = "Shell",
   SAMMissile = "SAMMissile",
   Port = "Port",
@@ -220,6 +229,7 @@ export const BuildableAttacks = unitTypeGroup([
   UnitType.HydrogenBomb,
   UnitType.MIRV,
   UnitType.Warship,
+  UnitType.Submarine,
 ] as const);
 
 export const Structures = unitTypeGroup([
@@ -258,6 +268,10 @@ export interface UnitParamsMap {
   };
 
   [UnitType.Warship]: {
+    patrolTile: TileRef;
+  };
+
+  [UnitType.Submarine]: {
     patrolTile: TileRef;
   };
 
@@ -504,6 +518,8 @@ export interface Unit {
   hasHealth(): boolean;
   warshipState(): WarshipState;
   updateWarshipState(update: Partial<WarshipState>): void;
+  submarineState(): SubmarineState;
+  updateSubmarineState(update: Partial<SubmarineState>): void;
   transportShipState(): TransportShipState;
   updateTransportShipState(update: Partial<TransportShipState>): void;
   nukeState(): NukeState;

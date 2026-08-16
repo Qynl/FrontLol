@@ -3,6 +3,7 @@ node_modules/
 .worktrees/
 out/
 static/
+dist/
 coverage/
 TODO.txt
 resources/images/.DS_Store

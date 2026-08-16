@@ -13,6 +13,7 @@ const trainLoadedCarriageSprite = assetUrl("sprites/trainCarriageLoaded.png");
 const trainEngineSprite = assetUrl("sprites/trainEngine.png");
 const transportShipSprite = assetUrl("sprites/transportship.png");
 const warshipSprite = assetUrl("sprites/warship.png");
+const submarineSprite = assetUrl("sprites/submarine.png");
 
 // Can't reuse TrainType because "loaded" is not a type, just an attribute
 const TrainTypeSprite = {
@@ -26,6 +27,7 @@ type TrainTypeSprite = (typeof TrainTypeSprite)[keyof typeof TrainTypeSprite];
 const SPRITE_CONFIG: Partial<Record<UnitType | TrainTypeSprite, string>> = {
   [UnitType.TransportShip]: transportShipSprite,
   [UnitType.Warship]: warshipSprite,
+  [UnitType.Submarine]: submarineSprite,
   [UnitType.SAMMissile]: samMissileSprite,
   [UnitType.AtomBomb]: atomBombSprite,
   [UnitType.HydrogenBomb]: hydrogenBombSprite,

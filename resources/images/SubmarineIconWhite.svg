@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- periscope -->
+    <path d="M50 24v10" />
+    <path d="M46 24h8" />
+    <!-- conning tower -->
+    <path d="M42 38h16l3 8H39z" />
+    <!-- hull -->
+    <path d="M16 52c0-12 8-18 34-18s34 6 34 18c0 8-6 12-16 12H32c-10 0-16-4-16-12z" />
+    <!-- bow planes -->
+    <path d="M18 52l-8 4" />
+    <path d="M18 60l-6 6" />
+    <!-- propeller hint -->
+    <path d="M82 48l8 4" />
+    <path d="M82 60l6 4" />
+  </g>
+</svg>

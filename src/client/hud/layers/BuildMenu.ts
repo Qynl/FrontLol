@@ -37,6 +37,7 @@ const atomBombIcon = assetUrl("images/NukeIconWhite.svg");
 const portIcon = assetUrl("images/PortIcon.svg");
 const samlauncherIcon = assetUrl("images/SamLauncherIconWhite.svg");
 const shieldIcon = assetUrl("images/ShieldIconWhite.svg");
+const submarineIcon = assetUrl("images/SubmarineIconWhite.svg");
 
 export interface BuildItemDisplay {
   unitType: PlayerBuildableUnitType;
@@ -122,6 +123,27 @@ export const buildTable: BuildItemDisplay[][] = [
 ];
 
 export const flattenedBuildTable = buildTable.flat();
+
+// Water troops are nested behind the Warship button: it opens a sub-menu
+// listing every naval combat unit (warship today, submarine/U-boat now, more
+// to come). Keeping this list separate means new water troops only need a
+// new entry here — not a change to the main build grid.
+export const waterBuildTable: BuildItemDisplay[] = [
+  {
+    unitType: UnitType.Warship,
+    icon: warshipIcon,
+    description: "build_menu.desc.warship",
+    key: "unit_type.warship",
+    countable: true,
+  },
+  {
+    unitType: UnitType.Submarine,
+    icon: submarineIcon,
+    description: "build_menu.desc.submarine",
+    key: "unit_type.submarine",
+    countable: true,
+  },
+];
 
 @customElement("build-menu")
 export class BuildMenu extends LitElement implements Controller {
@@ -280,6 +302,32 @@ export class BuildMenu extends LitElement implements Controller {
       font-weight: bold;
       font-size: 14px;
     }
+    .water-gateway-arrow {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 22px;
+      height: 22px;
+      line-height: 20px;
+      text-align: center;
+      background-color: #2c2c2c;
+      border: 1px solid #444;
+      border-radius: 10000px;
+      font-size: 15px;
+      color: #7dd3fc;
+      transition: all 0.3s ease;
+    }
+    .build-button:not(:disabled):hover > .water-gateway-arrow {
+      background-color: #3a3a3a;
+      border-color: #666;
+    }
+    .build-water-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #7dd3fc;
+      letter-spacing: 0.5px;
+    }
 
     @media (max-width: 768px) {
       .build-menu {
@@ -356,6 +404,10 @@ export class BuildMenu extends LitElement implements Controller {
   @state()
   private _hidden = true;
 
+  // True while the nested water-troop sub-menu is shown.
+  @state()
+  private waterMenuOpen = false;
+
   public canBuildOrUpgrade(item: BuildItemDisplay): boolean {
     if (this.game?.myPlayer() === null || this.playerBuildables === null) {
       return false;
@@ -409,77 +461,136 @@ export class BuildMenu extends LitElement implements Controller {
         class="build-menu ${this._hidden ? "hidden" : ""}"
         @contextmenu=${(e: MouseEvent) => e.preventDefault()}
       >
-        ${this.filteredBuildTable.map(
-          (row) => html`
-            <div class="build-row">
-              ${row.map((item) => {
-                const buildableUnit = this.playerBuildables?.find(
-                  (bu) => bu.type === item.unitType,
-                );
-                if (buildableUnit === undefined) {
-                  return html``;
-                }
-                const enabled =
-                  buildableUnit.canBuild !== false ||
-                  buildableUnit.canUpgrade !== false;
-                return html`
-                  <button
-                    class="build-button"
-                    @click=${() =>
-                      this.sendBuildOrUpgrade(buildableUnit, this.clickedTile)}
-                    ?disabled=${!enabled}
-                    title=${!enabled
-                      ? translateText("build_menu.not_enough_money")
-                      : ""}
-                  >
-                    <img
-                      src=${item.icon}
-                      alt="${item.unitType}"
-                      width="40"
-                      height="40"
-                    />
-                    <span class="build-name"
-                      >${item.key && translateText(item.key)}</span
-                    >
-                    <span class="build-description"
-                      >${item.description &&
-                      translateText(item.description)}</span
-                    >
-                    <span class="build-cost" translate="no">
-                      ${renderNumber(
-                        this.game && this.game.myPlayer() ? this.cost(item) : 0,
-                      )}
-                      <img
-                        src=${goldCoinIcon}
-                        alt="gold"
-                        width="12"
-                        height="12"
-                        class="align-middle"
-                      />
-                    </span>
-                    ${item.countable
-                      ? html`<div class="build-count-chip">
-                          <span class="build-count">${this.count(item)}</span>
-                        </div>`
-                      : ""}
-                  </button>
-                `;
-              })}
-            </div>
-          `,
-        )}
+        ${this.waterMenuOpen ? this.renderWaterMenu() : this.renderBuildMenu()}
       </div>
     `;
   }
 
+  private renderBuildMenu() {
+    return html`${this.filteredBuildTable.map(
+      (row) => html`
+        <div class="build-row">
+          ${row.map((item) => {
+            const buildableUnit = this.playerBuildables?.find(
+              (bu) => bu.type === item.unitType,
+            );
+            if (buildableUnit === undefined) {
+              return html``;
+            }
+            // The warship button is the gateway into the water-troop
+            // sub-menu, so it must stay clickable even when no ship can be
+            // built on the clicked tile yet (land, or no port). Buildability
+            // is enforced on the individual buttons inside the sub-menu.
+            const isWaterGateway = item.unitType === UnitType.Warship;
+            const enabled =
+              isWaterGateway ||
+              buildableUnit.canBuild !== false ||
+              buildableUnit.canUpgrade !== false;
+            return html`
+              <button
+                class="build-button"
+                @click=${() => this.onBuildItemClick(item, buildableUnit)}
+                ?disabled=${!enabled}
+                title=${!enabled
+                  ? translateText("build_menu.not_enough_money")
+                  : ""}
+              >
+                ${this.renderItemBody(item)}
+                ${isWaterGateway
+                  ? html`<span class="water-gateway-arrow">›</span>`
+                  : ""}
+              </button>
+            `;
+          })}
+        </div>
+      `,
+    )}`;
+  }
+
+  private renderWaterMenu() {
+    return html`
+      <div class="build-water-title">
+        ${translateText("build_menu.water_troops")}
+      </div>
+      <button class="build-button" @click=${() => (this.waterMenuOpen = false)}>
+        <span class="build-name">← ${translateText("common.back")}</span>
+      </button>
+      <div class="build-row">
+        ${waterBuildTable.map((item) => {
+          const buildableUnit = this.playerBuildables?.find(
+            (bu) => bu.type === item.unitType,
+          );
+          if (buildableUnit === undefined) {
+            return html``;
+          }
+          const enabled =
+            buildableUnit.canBuild !== false ||
+            buildableUnit.canUpgrade !== false;
+          return html`
+            <button
+              class="build-button"
+              @click=${() =>
+                this.sendBuildOrUpgrade(buildableUnit, this.clickedTile)}
+              ?disabled=${!enabled}
+              title=${!enabled
+                ? translateText("build_menu.not_enough_money")
+                : ""}
+            >
+              ${this.renderItemBody(item)}
+            </button>
+          `;
+        })}
+      </div>
+    `;
+  }
+
+  private renderItemBody(item: BuildItemDisplay) {
+    return html`
+      <img src=${item.icon} alt="${item.unitType}" width="40" height="40" />
+      <span class="build-name">${item.key && translateText(item.key)}</span>
+      <span class="build-description"
+        >${item.description && translateText(item.description)}</span
+      >
+      <span class="build-cost" translate="no">
+        ${renderNumber(this.game && this.game.myPlayer() ? this.cost(item) : 0)}
+        <img
+          src=${goldCoinIcon}
+          alt="gold"
+          width="12"
+          height="12"
+          class="align-middle"
+        />
+      </span>
+      ${item.countable
+        ? html`<div class="build-count-chip">
+            <span class="build-count">${this.count(item)}</span>
+          </div>`
+        : ""}
+    `;
+  }
+
+  private onBuildItemClick(
+    item: BuildItemDisplay,
+    buildableUnit: BuildableUnit,
+  ) {
+    // The warship button opens the nested water-troop menu.
+    if (item.unitType === UnitType.Warship) {
+      this.waterMenuOpen = true;
+      return;
+    }
+    this.sendBuildOrUpgrade(buildableUnit, this.clickedTile);
+  }
+
   hideMenu() {
     this._hidden = true;
+    this.waterMenuOpen = false;
     this.requestUpdate();
   }
 
   showMenu(clickedTile: TileRef) {
     this.clickedTile = clickedTile;
     this._hidden = false;
+    this.waterMenuOpen = false;
     this.refresh();
   }
 

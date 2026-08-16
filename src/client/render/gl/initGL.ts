@@ -103,23 +103,17 @@ export class GLUnavailableError extends Error {
 }
 
 /**
- * Report the WebGL2 GPU-init outcome to analytics (Google Tag). Fires on every
- * session so we can size the share of users on a software or missing WebGL2
- * context. `renderer` is the unmasked GPU string for non-ok outcomes, empty
- * otherwise.
+ * WebGL2 GPU-init outcome hook. No-op now that analytics/ad tracking has been
+ * removed; kept so callers (ClientGameRunner) don't need to change.
  */
 export function trackGLInit(
   status: "ok" | "software" | "unsupported" | "limited",
   renderer: string,
   maxTextureSize?: number,
 ): void {
-  window.gtag?.("event", "gl_init", {
-    status,
-    renderer: status === "ok" ? "" : renderer,
-    ...(maxTextureSize !== undefined && {
-      max_texture_size: maxTextureSize,
-    }),
-  });
+  void status;
+  void renderer;
+  void maxTextureSize;
 }
 
 /**

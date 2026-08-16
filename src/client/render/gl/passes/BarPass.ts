@@ -16,7 +16,7 @@ import type { Config } from "../../../../core/configuration/Config";
 import { UnitType } from "../../../../core/game/Game";
 import { maxHealthWithVeterancy } from "../../../../core/game/Veterancy";
 import type { RendererConfig, UnitState } from "../../types";
-import { UT_MISSILE_SILO, UT_SAM_LAUNCHER } from "../../types";
+import { UT_MISSILE_SILO, UT_SAM_LAUNCHER, UT_SUBMARINE } from "../../types";
 import type { RenderSettings } from "../RenderSettings";
 import { createProgram } from "../utils/GlUtils";
 
@@ -65,6 +65,7 @@ export class BarPass {
 
   private mapW: number;
   private warshipMaxHealth: number;
+  private submarineMaxHealth: number;
   private veterancyHealthBonus: number;
 
   constructor(
@@ -77,6 +78,7 @@ export class BarPass {
     this.settings = settings;
     this.mapW = header.mapWidth;
     this.warshipMaxHealth = config.unitInfo(UnitType.Warship).maxHealth ?? 0;
+    this.submarineMaxHealth = config.unitInfo(UnitType.Submarine).maxHealth ?? 0;
     this.veterancyHealthBonus = config.warshipVeterancyHealthBonus();
 
     // --- Shader program ---
@@ -146,8 +148,12 @@ export class BarPass {
       if (unit.health === null || unit.health <= 0) continue;
       // Veteran warships have a higher effective max health, so a full veteran
       // ship reads as full. Shared with the engine's UnitImpl.maxHealth().
+      const baseMaxHealth =
+        unit.unitType === UT_SUBMARINE
+          ? this.submarineMaxHealth
+          : this.warshipMaxHealth;
       const maxHealth = maxHealthWithVeterancy(
-        this.warshipMaxHealth,
+        baseMaxHealth,
         unit.veterancy,
         this.veterancyHealthBonus,
       );

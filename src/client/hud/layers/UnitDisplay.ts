@@ -25,6 +25,7 @@ import {
   missileSiloIcon,
   portIcon,
   samLauncherIcon,
+  submarineIcon,
   warshipIcon,
 } from "../HotbarIcons";
 
@@ -37,6 +38,7 @@ export class UnitDisplay extends LitElement implements Controller {
   private keybinds: Record<string, { value: string; key: string }> = {};
   private _cities = 0;
   private _warships = 0;
+  private _submarines = 0;
   private _factories = 0;
   private _missileSilo = 0;
   private _port = 0;
@@ -80,6 +82,7 @@ export class UnitDisplay extends LitElement implements Controller {
           (player?.units(UnitType.MissileSilo).length ?? 0) > 0
         );
       case UnitType.Warship:
+      case UnitType.Submarine:
         return (
           this.cost(item) <= (player?.gold() ?? 0n) &&
           (player?.units(UnitType.Port).length ?? 0) > 0
@@ -102,6 +105,7 @@ export class UnitDisplay extends LitElement implements Controller {
     this._samLauncher = player.totalUnitLevels(UnitType.SAMLauncher);
     this._factories = player.totalUnitLevels(UnitType.Factory);
     this._warships = player.totalUnitLevels(UnitType.Warship);
+    this._submarines = player.totalUnitLevels(UnitType.Submarine);
     this.requestUpdate();
   }
 
@@ -172,6 +176,13 @@ export class UnitDisplay extends LitElement implements Controller {
             this.keybinds["buildWarship"]?.key ?? "7",
           )}
           ${this.renderUnitItem(
+            submarineIcon,
+            this._submarines,
+            UnitType.Submarine,
+            "submarine",
+            "",
+          )}
+          ${this.renderUnitItem(
             atomBombIcon,
             null,
             UnitType.AtomBomb,
@@ -234,7 +245,7 @@ export class UnitDisplay extends LitElement implements Controller {
                 <div class="font-bold text-sm mb-1">
                   ${translateText(
                     "unit_type." + structureKey,
-                  )}${` [${displayHotkey}]`}
+                  )}${displayHotkey ? ` [${displayHotkey}]` : ""}
                 </div>
                 <div class="p-2">
                   ${translateText("build_menu.desc." + structureKey)}
@@ -281,6 +292,7 @@ export class UnitDisplay extends LitElement implements Controller {
                 );
                 break;
               case UnitType.Warship:
+              case UnitType.Submarine:
                 this.eventBus?.emit(new ToggleStructureEvent([UnitType.Port]));
                 break;
               default:
@@ -290,9 +302,13 @@ export class UnitDisplay extends LitElement implements Controller {
           @mouseleave=${() =>
             this.eventBus?.emit(new ToggleStructureEvent(null))}
         >
-          ${html`<div class="ml-0.5 text-[10px] relative -top-1 text-gray-400">
-            ${displayHotkey}
-          </div>`}
+          ${displayHotkey
+            ? html`<div
+                class="ml-0.5 text-[10px] relative -top-1 text-gray-400"
+              >
+                ${displayHotkey}
+              </div>`
+            : ""}
           <div class="flex items-center gap-0.5 pt-0.5">
             <img src=${icon} alt=${structureKey} class="align-middle size-5" />
             ${number !== null
