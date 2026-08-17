@@ -8,37 +8,37 @@
     {
       "coordinates": [750, 680],
       "name": "Isle of Infestation",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "coordinates": [1775, 435],
       "name": "Poort",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "coordinates": [1884, 1064],
       "name": "Battleship Bay",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "coordinates": [1116, 1000],
       "name": "Piracity",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "coordinates": [413, 378],
       "name": "Robbery Rock",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "coordinates": [1009, 272],
       "name": "Warship Wastelands",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "coordinates": [388, 1027],
       "name": "Port Pirate",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "coordinates": [2688, 968],
@@ -58,93 +58,93 @@
   "additionalNations": [
     {
       "name": "Just Pirates",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "The Pillage",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Nice island man"
     },
     {
       "name": "Bootyful Valley",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Chill island trader"
     },
     {
       "name": "Plunder Peak",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Corsair Cay",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Cutlass Cove",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Galleon Gulf",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Rogue’s Reach",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Buccaneer Bay",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Blackflag Basin",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Dreadnought Dunes",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Armada Anchor",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Caliber Cape",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Salvo Shores",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Bastion Bluffs",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Garrison Atoll",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Vanguard Reef",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Fortress Floe",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Citadel Crag",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Watchpoint Wick",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Redoubt Ridge",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     }
   ],
   "teamGameSpawnAreas": {

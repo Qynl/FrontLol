@@ -36,7 +36,7 @@
     },
     {
       "coordinates": [625, 534],
-      "flag": "Grand Duchy of Tuscany",
+      "flag": "Grand_Duchy_of_Tuscany",
       "name": "Grand Duchy of Tuscany"
     },
     {
@@ -46,12 +46,12 @@
     },
     {
       "coordinates": [469, 386],
-      "flag": "Duchy of Modena and Reggio",
+      "flag": "Duchy_of_Modena_and_Reggio",
       "name": "Duchy of Modena"
     },
     {
       "coordinates": [391, 254],
-      "flag": "Duchy of Parma",
+      "flag": "Duchy_of_Parma",
       "name": "Duchy of Parma"
     },
     {
@@ -61,7 +61,7 @@
     },
     {
       "coordinates": [278, 774],
-      "flag": "Kingdom of Sardinia",
+      "flag": "Kingdom_of_Sardinia",
       "name": "Kingdom of Sardinia"
     },
     {
@@ -71,7 +71,7 @@
     },
     {
       "coordinates": [747, 39],
-      "flag": "Habsburg Austria",
+      "flag": "Habsburg_Austria",
       "name": "Austrian Empire"
     },
     {
@@ -81,7 +81,7 @@
     },
     {
       "coordinates": [1255, 31],
-      "flag": "Kingdom of Hungary",
+      "flag": "Kingdom_of_Hungary",
       "name": "Kingdom of Hungary"
     },
     {

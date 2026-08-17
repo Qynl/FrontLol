@@ -21,17 +21,17 @@
   "nations": [
     {
       "coordinates": [1320, 945],
-      "flag": "Tierra del Fuego",
+      "flag": "Tierra_del_Fuego",
       "name": "Rio Grande"
     },
     {
       "coordinates": [1283, 1153],
-      "flag": "Tierra del Fuego",
+      "flag": "Tierra_del_Fuego",
       "name": "Ushuaia"
     },
     {
       "coordinates": [1452, 1118],
-      "flag": "Tierra del Fuego",
+      "flag": "Tierra_del_Fuego",
       "name": "Tolhuin"
     },
     {
@@ -41,27 +41,27 @@
     },
     {
       "coordinates": [1181, 536],
-      "flag": "Santa Cruz",
+      "flag": "Santa_Cruz",
       "name": "Rio Gallegos"
     },
     {
       "coordinates": [1200, 204],
-      "flag": "Santa Cruz",
+      "flag": "Santa_Cruz",
       "name": "Puerto Santa Cruz"
     },
     {
       "coordinates": [790, 251],
-      "flag": "Santa Cruz",
+      "flag": "Santa_Cruz",
       "name": "El Calafate"
     },
     {
       "coordinates": [1039, 22],
-      "flag": "Santa Cruz",
+      "flag": "Santa_Cruz",
       "name": "Gobernador Gregores"
     },
     {
       "coordinates": [1340, 24],
-      "flag": "Santa Cruz",
+      "flag": "Santa_Cruz",
       "name": "San Julian"
     },
     {

@@ -88,7 +88,7 @@
     {
       "coordinates": [574, 2494],
       "name": "Treasure Island",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "coordinates": [446, 2861],
@@ -153,7 +153,7 @@
     {
       "coordinates": [430, 3847],
       "name": "Luxor",
-      "flag": "Kingdom of Egypt"
+      "flag": "Kingdom_of_Egypt"
     },
     {
       "coordinates": [538, 4397],

@@ -139,7 +139,7 @@
   "additionalNations": [
     {
       "name": "Alash Autonomy",
-      "flag": "Alash Autonomy"
+      "flag": "Alash_Autonomy"
     },
     {
       "name": "Bukhara",
@@ -147,15 +147,15 @@
     },
     {
       "name": "Göktürks Khaganate",
-      "flag": "Göktürks Khaganate"
+      "flag": "Gokturks_Khaganate"
     },
     {
       "name": "Golden Horde",
-      "flag": "Golden Horde"
+      "flag": "Golden_Horde"
     },
     {
       "name": "Kazakh Khanate",
-      "flag": "Kazakh Khanate"
+      "flag": "Kazakh_Khanate"
     },
     {
       "name": "Khiva",
@@ -163,7 +163,7 @@
     },
     {
       "name": "Timurid Empire",
-      "flag": "Timurid Empire"
+      "flag": "Timurid_Empire"
     },
     {
       "name": "Turkestan",
@@ -171,7 +171,7 @@
     },
     {
       "name": "Turkestan Autonomy",
-      "flag": "Turkestan Autonomy"
+      "flag": "Turkestan_Autonomy"
     }
   ],
   "themes": ["asia"]

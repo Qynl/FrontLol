@@ -28,7 +28,7 @@
     {
       "coordinates": [1703, 1402],
       "name": "Imamate of Oman",
-      "flag": "White Flag"
+      "flag": "White_Flag"
     },
     {
       "coordinates": [1592, 1239],
@@ -43,12 +43,12 @@
     {
       "coordinates": [964, 1744],
       "name": "Kingdom of Yemen",
-      "flag": "Kingdom of Yemen"
+      "flag": "Kingdom_of_Yemen"
     },
     {
       "coordinates": [844, 1655],
       "name": "Emirate of Asir",
-      "flag": "Emirate of Asir"
+      "flag": "Emirate_of_Asir"
     },
     {
       "coordinates": [579, 1173],
@@ -58,12 +58,12 @@
     {
       "coordinates": [800, 1052],
       "name": "Rashidi Emirate",
-      "flag": "Rashidi Emirate"
+      "flag": "Rashidi_Emirate"
     },
     {
       "coordinates": [1092, 1336],
       "name": "Sultanate of Nejd",
-      "flag": "Sultanate of Nejd"
+      "flag": "Sultanate_of_Nejd"
     },
     {
       "coordinates": [1397, 1128],
@@ -73,12 +73,12 @@
     {
       "coordinates": [973, 296],
       "name": "Kingdom of Iraq",
-      "flag": "Kingdom of Iraq"
+      "flag": "Kingdom_of_Iraq"
     },
     {
       "coordinates": [554, 364],
       "name": "Kingdom of Syria",
-      "flag": "Kingdom of Syria"
+      "flag": "Kingdom_of_Syria"
     },
     {
       "coordinates": [423, 647],
@@ -88,7 +88,7 @@
     {
       "coordinates": [100, 781],
       "name": "Kingdom of Egypt",
-      "flag": "Kingdom of Egypt"
+      "flag": "Kingdom_of_Egypt"
     },
     {
       "coordinates": [159, 1530],
@@ -103,7 +103,7 @@
     {
       "coordinates": [401, 2005],
       "name": "Ethiopian Empire",
-      "flag": "Ethiopian Empire"
+      "flag": "Ethiopian_Empire"
     },
     {
       "coordinates": [826, 2044],
@@ -123,7 +123,7 @@
     {
       "coordinates": [2127, 373],
       "name": "Emirate of Afghanistan",
-      "flag": "Emirate of Afghanistan"
+      "flag": "Emirate_of_Afghanistan"
     },
     {
       "coordinates": [2087, 925],

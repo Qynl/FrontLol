@@ -21,52 +21,52 @@
   "nations": [
     {
       "coordinates": [37, 227],
-      "flag": "Sweden Norway Union",
+      "flag": "Sweden_Norway_Union",
       "name": "Agder"
     },
     {
       "coordinates": [252, 43],
-      "flag": "Sweden Norway Union",
+      "flag": "Sweden_Norway_Union",
       "name": "Østlandet"
     },
     {
       "coordinates": [737, 791],
-      "flag": "Sweden Norway Union",
+      "flag": "Sweden_Norway_Union",
       "name": "Skåne"
     },
     {
       "coordinates": [646, 566],
-      "flag": "Sweden Norway Union",
+      "flag": "Sweden_Norway_Union",
       "name": "Halland"
     },
     {
       "coordinates": [846, 488],
-      "flag": "Sweden Norway Union",
+      "flag": "Sweden_Norway_Union",
       "name": "Småland"
     },
     {
       "coordinates": [701, 260],
-      "flag": "Sweden Norway Union",
+      "flag": "Sweden_Norway_Union",
       "name": "Västergötland"
     },
     {
       "coordinates": [501, 273],
-      "flag": "Sweden Norway Union",
+      "flag": "Sweden_Norway_Union",
       "name": "Bohuslän"
     },
     {
       "coordinates": [843, 278],
-      "flag": "Sweden Norway Union",
+      "flag": "Sweden_Norway_Union",
       "name": "Östergötland"
     },
     {
       "coordinates": [579, 45],
-      "flag": "Sweden Norway Union",
+      "flag": "Sweden_Norway_Union",
       "name": "Dalsland"
     },
     {
       "coordinates": [833, 73],
-      "flag": "Sweden Norway Union",
+      "flag": "Sweden_Norway_Union",
       "name": "Närke"
     },
     {
@@ -91,7 +91,7 @@
     },
     {
       "coordinates": [585, 1182],
-      "flag": "German Confederation",
+      "flag": "German_Confederation",
       "name": "Mecklenburg-Schwerin"
     },
     {
@@ -101,12 +101,12 @@
     },
     {
       "coordinates": [59, 1201],
-      "flag": "German Confederation",
+      "flag": "German_Confederation",
       "name": "Oldenburg"
     },
     {
       "coordinates": [302, 1143],
-      "flag": "German Confederation",
+      "flag": "German_Confederation",
       "name": "Hamburg"
     },
     {

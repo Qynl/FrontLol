@@ -4,12 +4,12 @@
     "name": "None"
   },
   {
-    "code": "Abbasid Caliphate",
+    "code": "Abbasid_Caliphate",
     "continent": "Asia",
     "name": "Abbasid Caliphate"
   },
   {
-    "code": "Achaemenid Empire",
+    "code": "Achaemenid_Empire",
     "continent": "Asia",
     "name": "Achaemenid Empire"
   },
@@ -29,7 +29,7 @@
     "name": "Afghanistan"
   },
   {
-    "code": "African union",
+    "code": "African_union",
     "continent": "Africa",
     "name": "African Union"
   },
@@ -69,7 +69,7 @@
     "name": "Aland Islands"
   },
   {
-    "code": "Alash Autonomy",
+    "code": "Alash_Autonomy",
     "continent": "Asia",
     "name": "Alash Autonomy"
   },
@@ -94,12 +94,12 @@
     "name": "Alkebulan"
   },
   {
-    "code": "Almohad Dynasty",
+    "code": "Almohad_Dynasty",
     "continent": "Africa",
     "name": "Almohad Dynasty"
   },
   {
-    "code": "Almoravid Dynasty",
+    "code": "Almoravid_Dynasty",
     "continent": "Africa",
     "name": "Almoravid Dynasty"
   },
@@ -109,7 +109,7 @@
     "name": "Alsace"
   },
   {
-    "code": "Amazigh flag",
+    "code": "Amazigh_flag",
     "continent": "Africa",
     "name": "Amazigh Flag"
   },
@@ -134,17 +134,17 @@
     "name": "Armenia"
   },
   {
-    "code": "Armenian Kingdom Of Cilicia",
+    "code": "Armenian_Kingdom_Of_Cilicia",
     "continent": "Asia",
     "name": "Armenian Kingdom of Cilicia"
   },
   {
-    "code": "Armenian SSR",
+    "code": "Armenian_SSR",
     "continent": "Asia",
     "name": "Armenian SSR"
   },
   {
-    "code": "Anarchist flag",
+    "code": "Anarchist_flag",
     "name": "Anarchist Flag"
   },
   {
@@ -178,7 +178,7 @@
     "name": "Antarctica"
   },
   {
-    "code": "Antarctica (True South)",
+    "code": "Antarctica_True_South",
     "continent": "Antarctica",
     "name": "True South"
   },
@@ -198,7 +198,7 @@
     "name": "Argentina"
   },
   {
-    "code": "Aram Damascus",
+    "code": "Aram_Damascus",
     "continent": "Asia",
     "name": "Aram Damascus"
   },
@@ -268,7 +268,7 @@
     "name": "Austria-Hungary"
   },
   {
-    "code": "Habsburg Austria",
+    "code": "Habsburg_Austria",
     "continent": "Europe",
     "name": "Austrian Empire"
   },
@@ -278,7 +278,7 @@
     "name": "Australia"
   },
   {
-    "code": "Australian Aboriginal Flag",
+    "code": "Australian_Aboriginal_Flag",
     "continent": "Oceania",
     "name": "Australian Aboriginal Flag"
   },
@@ -298,12 +298,12 @@
     "name": "Avignon"
   },
   {
-    "code": "Ayyubid Dynasty",
+    "code": "Ayyubid_Dynasty",
     "continent": "Asia",
     "name": "Ayyubid Dynasty"
   },
   {
-    "code": "Azad Kashmir",
+    "code": "Azad_Kashmir",
     "continent": "Asia",
     "name": "Azad Kashmir"
   },
@@ -313,7 +313,7 @@
     "name": "Azerbaijan"
   },
   {
-    "code": "Azerbaijan SSR",
+    "code": "Azerbaijan_SSR",
     "continent": "Asia",
     "name": "Azerbaijan SSR"
   },
@@ -323,7 +323,7 @@
     "name": "Azores"
   },
   {
-    "code": "Aztec Empire",
+    "code": "Aztec_Empire",
     "continent": "North America",
     "name": "Aztec Empire"
   },
@@ -476,7 +476,7 @@
     "name": "Bremen"
   },
   {
-    "code": "British Antarctic Territory",
+    "code": "British_Antarctic_Territory",
     "continent": "Antarctica",
     "name": "British Antarctic Territory"
   },
@@ -486,7 +486,7 @@
     "name": "British Columbia"
   },
   {
-    "code": "Flag_of_Hong_Kong_(1959-1997)",
+    "code": "Flag_of_Hong_Kong_1959-1997",
     "continent": "Asia",
     "name": "British Hong Kong"
   },
@@ -536,7 +536,7 @@
     "name": "Cross Of Burgundy"
   },
   {
-    "code": "Crown Of Aragon",
+    "code": "Crown_Of_Aragon",
     "continent": "Europe",
     "name": "Crown Of Aragon"
   },
@@ -551,12 +551,12 @@
     "name": "Burundi"
   },
   {
-    "code": "Byelorussian SSR",
+    "code": "Byelorussian_SSR",
     "continent": "Europe",
     "name": "Byelorussian SSR"
   },
   {
-    "code": "Byzantine Empire",
+    "code": "Byzantine_Empire",
     "continent": "Europe",
     "name": "Byzantine Empire"
   },
@@ -675,7 +675,7 @@
     "name": "Champagne-Ardenne"
   },
   {
-    "code": "Cherokee Nation",
+    "code": "Cherokee_Nation",
     "continent": "North America",
     "name": "Cherokee"
   },
@@ -695,7 +695,7 @@
     "name": "Chile"
   },
   {
-    "code": "Chin State",
+    "code": "Chin_State",
     "continent": "Asia",
     "name": "Chin State"
   },
@@ -759,7 +759,7 @@
     "name": "Comoros"
   },
   {
-    "code": "Communist flag",
+    "code": "Communist_flag",
     "name": "Communist Flag"
   },
   {
@@ -768,7 +768,7 @@
     "name": "Community Of Madrid"
   },
   {
-    "code": "Confederate States",
+    "code": "Confederate_States",
     "continent": "North America",
     "name": "Confederate States",
     "restricted": true
@@ -794,7 +794,7 @@
     "name": "Coquimbo"
   },
   {
-    "code": "Cordoba (Argentina)",
+    "code": "Cordoba_Argentina",
     "continent": "South America",
     "name": "Cordoba (Argentina)"
   },
@@ -819,17 +819,17 @@
     "name": "Costa Rica"
   },
   {
-    "code": "County of Edessa",
+    "code": "County_of_Edessa",
     "continent": "Asia",
     "name": "County of Edessa"
   },
   {
-    "code": "County of Tripoli",
+    "code": "County_of_Tripoli",
     "continent": "Asia",
     "name": "County of Tripoli"
   },
   {
-    "code": "Courland Governorate",
+    "code": "Courland_Governorate",
     "continent": "Europe",
     "name": "Courland Governorate"
   },
@@ -849,7 +849,7 @@
     "name": "Croatia"
   },
   {
-    "code": "Cthulhu Republic",
+    "code": "Cthulhu_Republic",
     "name": "Cthulhu Republic"
   },
   {
@@ -943,17 +943,17 @@
     "name": "Dominican Republic"
   },
   {
-    "code": "Duchy of Courland and Semigallia",
+    "code": "Duchy_of_Courland_and_Semigallia",
     "continent": "Europe",
     "name": "Duchy of Courland and Semigallia"
   },
   {
-    "code": "Duchy of Modena and Reggio",
+    "code": "Duchy_of_Modena_and_Reggio",
     "continent": "Europe",
     "name": "Duchy of Modena and Reggio"
   },
   {
-    "code": "Duchy of Parma",
+    "code": "Duchy_of_Parma",
     "continent": "Europe",
     "name": "Duchy of Parma"
   },
@@ -963,7 +963,7 @@
     "name": "Dumnonia"
   },
   {
-    "code": "Dutch East India Company",
+    "code": "Dutch_East_India_Company",
     "name": "Dutch East India Company"
   },
   {
@@ -972,7 +972,7 @@
     "name": "Dyfed"
   },
   {
-    "code": "1_East Anglia",
+    "code": "1_East_Anglia",
     "continent": "Europe",
     "name": "East Anglia"
   },
@@ -1007,12 +1007,12 @@
     "name": "El Salvador"
   },
   {
-    "code": "Emirate of Afghanistan",
+    "code": "Emirate_of_Afghanistan",
     "continent": "Asia",
     "name": "Emirate of Afghanistan"
   },
   {
-    "code": "Emirate of Asir",
+    "code": "Emirate_of_Asir",
     "continent": "Asia",
     "name": "Emirate of Asir"
   },
@@ -1022,13 +1022,13 @@
     "name": "Emirate of Granada"
   },
   {
-    "code": "Empire of Japan",
+    "code": "Empire_of_Japan",
     "continent": "Asia",
     "name": "Empire of Japan",
     "restricted": true
   },
   {
-    "code": "Empire of Japan1",
+    "code": "Empire_of_Japan1",
     "continent": "Asia",
     "name": "Empire of Japan"
   },
@@ -1038,7 +1038,7 @@
     "name": "England"
   },
   {
-    "code": "Entre Rios",
+    "code": "Entre_Rios",
     "continent": "South America",
     "name": "Entre Rios"
   },
@@ -1063,12 +1063,12 @@
     "name": "Estonia"
   },
   {
-    "code": "Estonia (nordic)",
+    "code": "Estonia_nordic",
     "continent": "Europe",
     "name": "Estonia (Nordic)"
   },
   {
-    "code": "Estonian SSR",
+    "code": "Estonian_SSR",
     "continent": "Europe",
     "name": "Estonian SSR"
   },
@@ -1083,7 +1083,7 @@
     "name": "Ethiopia"
   },
   {
-    "code": "Ethiopian Empire",
+    "code": "Ethiopian_Empire",
     "continent": "Africa",
     "name": "Ethiopian Empire"
   },
@@ -1113,13 +1113,13 @@
     "name": "Faroe Islands"
   },
   {
-    "code": "Fascist Spain",
+    "code": "Fascist_Spain",
     "continent": "Europe",
     "name": "Fascist Spain",
     "restricted": true
   },
   {
-    "code": "Fatimid Caliphate",
+    "code": "Fatimid_Caliphate",
     "continent": "Africa",
     "name": "Fatimid Caliphate"
   },
@@ -1174,12 +1174,12 @@
     "name": "Franks"
   },
   {
-    "code": "Free France",
+    "code": "Free_France",
     "continent": "Europe",
     "name": "Free France"
   },
   {
-    "code": "French foreign legion",
+    "code": "French_foreign_legion",
     "name": "French Foreign Legion"
   },
   {
@@ -1242,17 +1242,17 @@
     "name": "Georgia (US State)"
   },
   {
-    "code": "Georgian SSR",
+    "code": "Georgian_SSR",
     "continent": "Asia",
     "name": "Georgian SSR"
   },
   {
-    "code": "German Confederation",
+    "code": "German_Confederation",
     "continent": "Europe",
     "name": "German Confederation"
   },
   {
-    "code": "German Empire",
+    "code": "German_Empire",
     "continent": "Europe",
     "name": "German Empire",
     "restricted": true
@@ -1273,12 +1273,12 @@
     "name": "Gibraltar"
   },
   {
-    "code": "Gokturks Khaganate",
+    "code": "Gokturks_Khaganate",
     "continent": "Asia",
     "name": "Göktürks Khaganate"
   },
   {
-    "code": "Golden Horde",
+    "code": "Golden_Horde",
     "continent": "Asia",
     "name": "Golden Horde"
   },
@@ -1288,17 +1288,17 @@
     "name": "Grand Est"
   },
   {
-    "code": "Grand Duchy of Finland",
+    "code": "Grand_Duchy_of_Finland",
     "continent": "Europe",
     "name": "Grand Duchy of Finland"
   },
   {
-    "code": "Grand Duchy of Lithuania",
+    "code": "Grand_Duchy_of_Lithuania",
     "continent": "Europe",
     "name": "Grand Duchy of Lithuania"
   },
   {
-    "code": "Grand Duchy of Tuscany",
+    "code": "Grand_Duchy_of_Tuscany",
     "continent": "Europe",
     "name": "Grand Duchy of Tuscany"
   },
@@ -1402,7 +1402,7 @@
     "name": "Hesse"
   },
   {
-    "code": "Holy Roman Empire",
+    "code": "Holy_Roman_Empire",
     "continent": "Europe",
     "name": "Holy Roman Empire"
   },
@@ -1442,7 +1442,7 @@
     "name": "Île-de-France"
   },
   {
-    "code": "Illinois (Centennial)",
+    "code": "Illinois_Centennial",
     "continent": "North America",
     "name": "Illinois (Centennial)"
   },
@@ -1487,7 +1487,7 @@
     "name": "Iran"
   },
   {
-    "code": "Pahlavi Iran",
+    "code": "Pahlavi_Iran",
     "continent": "Asia",
     "name": "Pahlavi Iran"
   },
@@ -1522,7 +1522,7 @@
     "name": "Jamaica"
   },
   {
-    "code": "Jammu and Kashmir",
+    "code": "Jammu_and_Kashmir",
     "continent": "Asia",
     "name": "Jammu and Kashmir"
   },
@@ -1562,12 +1562,12 @@
     "name": "Kachin"
   },
   {
-    "code": "Kalmar Union",
+    "code": "Kalmar_Union",
     "continent": "Europe",
     "name": "Kalmar Union"
   },
   {
-    "code": "Kansas (Banner)",
+    "code": "Kansas_Banner",
     "continent": "North America",
     "name": "Kansas (Banner)"
   },
@@ -1577,7 +1577,7 @@
     "name": "Kansas"
   },
   {
-    "code": "Karelo-Finnish SSR",
+    "code": "Karelo-Finnish_SSR",
     "continent": "Europe",
     "name": "Karelo-Finnish SSR"
   },
@@ -1592,12 +1592,12 @@
     "name": "Kayin"
   },
   {
-    "code": "Kazakh Khanate",
+    "code": "Kazakh_Khanate",
     "continent": "Asia",
     "name": "Kazakh Khanate"
   },
   {
-    "code": "Kazakh SSR",
+    "code": "Kazakh_SSR",
     "continent": "Asia",
     "name": "Kazakh SSR"
   },
@@ -1647,47 +1647,47 @@
     "name": "Khiva"
   },
   {
-    "code": "Kingdom of Araucania and Patagonia",
+    "code": "Kingdom_of_Araucania_and_Patagonia",
     "continent": "South America",
     "name": "Kingdom of Araucania and Patagonia"
   },
   {
-    "code": "Kingdom of Benin",
+    "code": "Kingdom_of_Benin",
     "continent": "Africa",
     "name": "Kingdom of Benin"
   },
   {
-    "code": "Kingdom Of Cyprus",
+    "code": "Kingdom_Of_Cyprus",
     "continent": "Europe",
     "name": "Kingdom of Cyprus"
   },
   {
-    "code": "Kingdom of Dahomey",
+    "code": "Kingdom_of_Dahomey",
     "continent": "Africa",
     "name": "Kingdom of Dahomey"
   },
   {
-    "code": "Kingdom of Egypt",
+    "code": "Kingdom_of_Egypt",
     "continent": "Africa",
     "name": "Kingdom of Egypt"
   },
   {
-    "code": "Kingdom of France",
+    "code": "Kingdom_of_France",
     "continent": "Europe",
     "name": "Kingdom of France"
   },
   {
-    "code": "Kingdom of Hungary",
+    "code": "Kingdom_of_Hungary",
     "continent": "Europe",
     "name": "Kingdom of Hungary"
   },
   {
-    "code": "Kingdom of Iraq",
+    "code": "Kingdom_of_Iraq",
     "continent": "Asia",
     "name": "Kingdom of Iraq"
   },
   {
-    "code": "Kingdom of Ireland",
+    "code": "Kingdom_of_Ireland",
     "continent": "Europe",
     "name": "Kingdom of Ireland"
   },
@@ -1697,12 +1697,12 @@
     "name": "Kingdom of Italy"
   },
   {
-    "code": "Kingdom of Jerusalem",
+    "code": "Kingdom_of_Jerusalem",
     "continent": "Asia",
     "name": "Kingdom of Jerusalem"
   },
   {
-    "code": "Kingdom of Judah",
+    "code": "Kingdom_of_Judah",
     "continent": "Asia",
     "name": "Kingdom of Judah"
   },
@@ -1712,7 +1712,7 @@
     "name": "Kingdom of Portugal"
   },
   {
-    "code": "Kingdom of Kongo",
+    "code": "Kingdom_of_Kongo",
     "continent": "Africa",
     "name": "Kingdom of Kongo"
   },
@@ -1722,12 +1722,12 @@
     "name": "Kingdom Of Majorca"
   },
   {
-    "code": "Kingdom of Sardinia",
+    "code": "Kingdom_of_Sardinia",
     "continent": "Europe",
     "name": "Kingdom of Sardinia"
   },
   {
-    "code": "Kingdom of Syria",
+    "code": "Kingdom_of_Syria",
     "continent": "Asia",
     "name": "Kingdom of Syria"
   },
@@ -1737,12 +1737,12 @@
     "name": "Kingdom of the Two Sicilies"
   },
   {
-    "code": "Kingdom of Yemen",
+    "code": "Kingdom_of_Yemen",
     "continent": "Asia",
     "name": "Kingdom of Yemen"
   },
   {
-    "code": "Kirghiz SSR",
+    "code": "Kirghiz_SSR",
     "continent": "Asia",
     "name": "Kirghiz SSR"
   },
@@ -1766,7 +1766,7 @@
     "name": "Kosovo"
   },
   {
-    "code": "Kuala Lumpur",
+    "code": "Kuala_Lumpur",
     "continent": "Asia",
     "name": "Kuala Lumpur"
   },
@@ -1791,17 +1791,17 @@
     "name": "Kyrgyzstan"
   },
   {
-    "code": "La Araucania",
+    "code": "La_Araucania",
     "continent": "South America",
     "name": "La Araucania"
   },
   {
-    "code": "La Pampa",
+    "code": "La_Pampa",
     "continent": "South America",
     "name": "La Pampa"
   },
   {
-    "code": "La Rioja",
+    "code": "La_Rioja",
     "continent": "South America",
     "name": "La Rioja (ar)"
   },
@@ -1846,12 +1846,12 @@
     "name": "Latvia"
   },
   {
-    "code": "Latvian SSR",
+    "code": "Latvian_SSR",
     "continent": "Europe",
     "name": "Latvian SSR"
   },
   {
-    "code": "League of Nations",
+    "code": "League_of_Nations",
     "name": "League of Nations"
   },
   {
@@ -1884,7 +1884,7 @@
     "name": "Liberalism Flag"
   },
   {
-    "code": "Libyan Jamahiriya",
+    "code": "Libyan_Jamahiriya",
     "continent": "Africa",
     "name": "Libyan Jamahiriya"
   },
@@ -1923,17 +1923,17 @@
     "name": "Lithuania"
   },
   {
-    "code": "Lithuanian SSR",
+    "code": "Lithuanian_SSR",
     "continent": "Europe",
     "name": "Lithuanian SSR"
   },
   {
-    "code": "Los Lagos",
+    "code": "Los_Lagos",
     "continent": "South America",
     "name": "Los Lagos"
   },
   {
-    "code": "Los Rios",
+    "code": "Los_Rios",
     "continent": "South America",
     "name": "Los Rios"
   },
@@ -1953,7 +1953,7 @@
     "name": "Lower Saxony"
   },
   {
-    "code": "Lower Silesia",
+    "code": "Lower_Silesia",
     "continent": "Europe",
     "name": "Lower Silesia"
   },
@@ -1998,7 +1998,7 @@
     "name": "Madagascar"
   },
   {
-    "code": "Maine (1901)",
+    "code": "Maine_1901",
     "continent": "North America",
     "name": "Maine (1901)"
   },
@@ -2013,7 +2013,7 @@
     "name": "Majapahit"
   },
   {
-    "code": "Massachusetts (Naval)",
+    "code": "Massachusetts_Naval",
     "continent": "North America",
     "name": "Massachusetts (Naval)"
   },
@@ -2048,7 +2048,7 @@
     "name": "Mali"
   },
   {
-    "code": "Mali Empire",
+    "code": "Mali_Empire",
     "continent": "Africa",
     "name": "Mali Empire"
   },
@@ -2063,7 +2063,7 @@
     "name": "Manchukuo"
   },
   {
-    "code": "Maori flag",
+    "code": "Maori_flag",
     "continent": "Oceania",
     "name": "Māori Flag"
   },
@@ -2108,7 +2108,7 @@
     "name": "Mecklenburg-Vorpommern"
   },
   {
-    "code": "Median Empire",
+    "code": "Median_Empire",
     "continent": "Asia",
     "name": "Median Empire"
   },
@@ -2183,7 +2183,7 @@
     "name": "Missouri"
   },
   {
-    "code": "Moldavian SSR",
+    "code": "Moldavian_SSR",
     "continent": "Europe",
     "name": "Moldavian SSR"
   },
@@ -2193,7 +2193,7 @@
     "name": "Moldova"
   },
   {
-    "code": "Mon State",
+    "code": "Mon_State",
     "continent": "Asia",
     "name": "Mon State"
   },
@@ -2203,7 +2203,7 @@
     "name": "Monaco"
   },
   {
-    "code": "Mongol Empire",
+    "code": "Mongol_Empire",
     "continent": "Asia",
     "name": "Mongol Empire"
   },
@@ -2233,7 +2233,7 @@
     "name": "Morocco"
   },
   {
-    "code": "Mosquito Kingdom",
+    "code": "Mosquito_Kingdom",
     "continent": "North America",
     "name": "Mosquito Kingdom"
   },
@@ -2312,7 +2312,7 @@
     "name": "Nebraska"
   },
   {
-    "code": "Negeri Sembilan",
+    "code": "Negeri_Sembilan",
     "continent": "Asia",
     "name": "Negeri Sembilan"
   },
@@ -2356,7 +2356,7 @@
     "name": "New Caledonia"
   },
   {
-    "code": "New England",
+    "code": "New_England",
     "continent": "North America",
     "name": "New England"
   },
@@ -2431,7 +2431,7 @@
     "name": "Normandy"
   },
   {
-    "code": "North karelia",
+    "code": "North_karelia",
     "continent": "Europe",
     "name": "North Karelia"
   },
@@ -2461,7 +2461,7 @@
     "name": "North Rhine-Westphalia"
   },
   {
-    "code": "North yemen",
+    "code": "North_yemen",
     "continent": "Asia",
     "name": "North Yemen"
   },
@@ -2481,7 +2481,7 @@
     "name": "Northern Territory"
   },
   {
-    "code": "1_Northern Ui Neill",
+    "code": "1_Northern_Ui_Neill",
     "continent": "Europe",
     "name": "Northern Uí Néill"
   },
@@ -2546,12 +2546,12 @@
     "name": "Ontario"
   },
   {
-    "code": "Order Of Malta",
+    "code": "Order_Of_Malta",
     "continent": "Europe",
     "name": "Sovereign Military Order of Malta"
   },
   {
-    "code": "Oregon (Reverse)",
+    "code": "Oregon_Reverse",
     "continent": "North America",
     "name": "Oregon (Reverse)"
   },
@@ -2561,7 +2561,7 @@
     "name": "Oregon"
   },
   {
-    "code": "Ottoman Empire",
+    "code": "Ottoman_Empire",
     "continent": "Asia",
     "name": "Ottoman Empire"
   },
@@ -2666,7 +2666,7 @@
     "name": "Philippines"
   },
   {
-    "code": "Philippines (war)",
+    "code": "Philippines_war",
     "continent": "Asia",
     "name": "Philippines (war)"
   },
@@ -2681,7 +2681,7 @@
     "name": "Picardy"
   },
   {
-    "code": "Pine Tree Flag",
+    "code": "Pine_Tree_Flag",
     "continent": "North America",
     "name": "Pine Tree Flag"
   },
@@ -2705,7 +2705,7 @@
     "name": "Polar Bears"
   },
   {
-    "code": "Polish-Lithuanian Commonwealth",
+    "code": "Polish-Lithuanian_Commonwealth",
     "continent": "Europe",
     "name": "Polish–Lithuanian Commonwealth"
   },
@@ -2725,12 +2725,12 @@
     "name": "Prince Edward Island"
   },
   {
-    "code": "Principality of Antioch",
+    "code": "Principality_of_Antioch",
     "continent": "Asia",
     "name": "Principality of Antioch"
   },
   {
-    "code": "Principality of Moldavia",
+    "code": "Principality_of_Moldavia",
     "continent": "Europe",
     "name": "Principality of Moldavia"
   },
@@ -2755,7 +2755,7 @@
     "name": "Puerto Rico"
   },
   {
-    "code": "Purple Flag",
+    "code": "Purple_Flag",
     "name": "Purple Flag"
   },
   {
@@ -2769,7 +2769,7 @@
     "name": "Qatar"
   },
   {
-    "code": "Qing Dynasty",
+    "code": "Qing_Dynasty",
     "continent": "Asia",
     "name": "Qing Dynasty"
   },
@@ -2789,12 +2789,12 @@
     "name": "Rakhine"
   },
   {
-    "code": "Rashidi Emirate",
+    "code": "Rashidi_Emirate",
     "continent": "Asia",
     "name": "Rashidi Emirate"
   },
   {
-    "code": "Republic of China",
+    "code": "Republic_of_China",
     "continent": "Asia",
     "name": "Republic of China"
   },
@@ -2804,22 +2804,22 @@
     "name": "Republic of the Congo"
   },
   {
-    "code": "Republic of Egypt",
+    "code": "Republic_of_Egypt",
     "continent": "Africa",
     "name": "Republic of Egypt"
   },
   {
-    "code": "Republic of Formosa",
+    "code": "Republic_of_Formosa",
     "continent": "Asia",
     "name": "Republic of Formosa"
   },
   {
-    "code": "Republic of Korea",
+    "code": "Republic_of_Korea",
     "continent": "Asia",
     "name": "Republic of Korea"
   },
   {
-    "code": "Republic of Pirates",
+    "code": "Republic_of_Pirates",
     "continent": "North America",
     "name": "Republic of Pirates"
   },
@@ -2829,7 +2829,7 @@
     "name": "Republic Of The Rif"
   },
   {
-    "code": "Republika Srpska",
+    "code": "Republika_Srpska",
     "continent": "Europe",
     "name": "Republika Srpska"
   },
@@ -2859,7 +2859,7 @@
     "name": "Rio de Janeiro"
   },
   {
-    "code": "Rio Negro",
+    "code": "Rio_Negro",
     "continent": "South America",
     "name": "Rio Negro"
   },
@@ -2869,7 +2869,7 @@
     "name": "Roman Empire"
   },
   {
-    "code": "Romanov Russia",
+    "code": "Romanov_Russia",
     "continent": "Europe",
     "name": "Romanov Russia"
   },
@@ -2879,12 +2879,12 @@
     "name": "Romania"
   },
   {
-    "code": "Communist Romania",
+    "code": "Communist_Romania",
     "continent": "Europe",
     "name": "Romanian People's Republic"
   },
   {
-    "code": "Ror Empire",
+    "code": "Ror_Empire",
     "name": "Ror Empire"
   },
   {
@@ -3088,7 +3088,7 @@
     "name": "Mari El Republic"
   },
   {
-    "code": "RU-ME (2006-2011)",
+    "code": "RU-ME_2006-2011",
     "continent": "Europe",
     "name": "Mari El (2006-2011)"
   },
@@ -3303,7 +3303,7 @@
     "name": "Zabaykalsky Krai"
   },
   {
-    "code": "Russian SSR",
+    "code": "Russian_SSR",
     "continent": "Europe",
     "name": "Russian SSR"
   },
@@ -3318,7 +3318,7 @@
     "name": "Saarland"
   },
   {
-    "code": "Saba kingdom",
+    "code": "Saba_kingdom",
     "continent": "Asia",
     "name": "Saba Kingdom"
   },
@@ -3368,7 +3368,7 @@
     "name": "Salta"
   },
   {
-    "code": "Sami flag",
+    "code": "Sami_flag",
     "continent": "Europe",
     "name": "Sami Flag"
   },
@@ -3378,12 +3378,12 @@
     "name": "Samoa"
   },
   {
-    "code": "San Juan",
+    "code": "San_Juan",
     "continent": "South America",
     "name": "San Juan"
   },
   {
-    "code": "San Luis",
+    "code": "San_Luis",
     "continent": "South America",
     "name": "San Luis"
   },
@@ -3393,12 +3393,12 @@
     "name": "San Marino"
   },
   {
-    "code": "Santa Cruz",
+    "code": "Santa_Cruz",
     "continent": "South America",
     "name": "Santa Cruz"
   },
   {
-    "code": "Santa Fe",
+    "code": "Santa_Fe",
     "continent": "South America",
     "name": "Santa Fe"
   },
@@ -3407,7 +3407,7 @@
     "name": "Santa Claus"
   },
   {
-    "code": "Santiago del Estero",
+    "code": "Santiago_del_Estero",
     "continent": "South America",
     "name": "Santiago del Estero"
   },
@@ -3417,7 +3417,7 @@
     "name": "Sao Tome and Principe"
   },
   {
-    "code": "Sao Paulo",
+    "code": "Sao_Paulo",
     "continent": "South America",
     "name": "São Paulo"
   },
@@ -3436,7 +3436,7 @@
     "name": "Saskatchewan"
   },
   {
-    "code": "Sassanid Empire",
+    "code": "Sassanid_Empire",
     "continent": "Asia",
     "name": "Sassanid Empire"
   },
@@ -3466,12 +3466,12 @@
     "name": "Scotland"
   },
   {
-    "code": "Second Republic of Iraq",
+    "code": "Second_Republic_of_Iraq",
     "continent": "Asia",
     "name": "Second Republic of Iraq"
   },
   {
-    "code": "Second Spanish Republic",
+    "code": "Second_Spanish_Republic",
     "continent": "Europe",
     "name": "Second Spanish Republic"
   },
@@ -3481,7 +3481,7 @@
     "name": "Selangor"
   },
   {
-    "code": "Seljuk Empire",
+    "code": "Seljuk_Empire",
     "continent": "Asia",
     "name": "Seljuk Empire"
   },
@@ -3615,12 +3615,12 @@
     "name": "South Sudan"
   },
   {
-    "code": "south yemen",
+    "code": "south_yemen",
     "continent": "Asia",
     "name": "South Yemen"
   },
   {
-    "code": "1_Southern Ui Neill",
+    "code": "1_Southern_Ui_Neill",
     "continent": "Europe",
     "name": "Southern Uí Néill"
   },
@@ -3660,12 +3660,12 @@
     "name": "Sudan"
   },
   {
-    "code": "Sultanate of Nejd",
+    "code": "Sultanate_of_Nejd",
     "continent": "Asia",
     "name": "Sultanate of Nejd"
   },
   {
-    "code": "Sultanate Of Rum",
+    "code": "Sultanate_Of_Rum",
     "continent": "Asia",
     "name": "Sultanate of Rum"
   },
@@ -3690,17 +3690,17 @@
     "name": "Sweden"
   },
   {
-    "code": "Sweden Norway Union",
+    "code": "Sweden_Norway_Union",
     "continent": "Europe",
     "name": "Sweden Norway Union"
   },
   {
-    "code": "Sweden-Norway (1836)",
+    "code": "Sweden-Norway_1836",
     "continent": "Europe",
     "name": "Sweden Norway (1836)"
   },
   {
-    "code": "Swedish Empire",
+    "code": "Swedish_Empire",
     "continent": "Europe",
     "name": "Swedish Empire"
   },
@@ -3725,7 +3725,7 @@
     "name": "Taiwan"
   },
   {
-    "code": "Tajik SSR",
+    "code": "Tajik_SSR",
     "continent": "Asia",
     "name": "Tajik SSR"
   },
@@ -3770,7 +3770,7 @@
     "name": "Texas"
   },
   {
-    "code": "Teutonic Order",
+    "code": "Teutonic_Order",
     "continent": "Europe",
     "name": "Teutonic Order"
   },
@@ -3790,7 +3790,7 @@
     "name": "Tibet"
   },
   {
-    "code": "Tierra del Fuego",
+    "code": "Tierra_del_Fuego",
     "continent": "South America",
     "name": "Tierra del Fuego"
   },
@@ -3800,7 +3800,7 @@
     "name": "Timor-Leste"
   },
   {
-    "code": "Timurid Empire",
+    "code": "Timurid_Empire",
     "continent": "Asia",
     "name": "Timurid Empire"
   },
@@ -3835,7 +3835,7 @@
     "name": "Tristan da Cunha"
   },
   {
-    "code": "Trucial States",
+    "code": "Trucial_States",
     "continent": "Asia",
     "name": "Trucial States"
   },
@@ -3850,7 +3850,7 @@
     "name": "Tunisia"
   },
   {
-    "code": "Turkestan Autonomy",
+    "code": "Turkestan_Autonomy",
     "continent": "Asia",
     "name": "Turkestan Autonomy"
   },
@@ -3865,7 +3865,7 @@
     "name": "Türkiye"
   },
   {
-    "code": "Turkmen SSR",
+    "code": "Turkmen_SSR",
     "continent": "Asia",
     "name": "Turkmen SSR"
   },
@@ -3885,7 +3885,7 @@
     "name": "Tuvalu"
   },
   {
-    "code": "USA 1776",
+    "code": "USA_1776",
     "continent": "North America",
     "name": "USA 1776"
   },
@@ -3905,7 +3905,7 @@
     "name": "Ukraine"
   },
   {
-    "code": "Ukrainian SSR",
+    "code": "Ukrainian_SSR",
     "continent": "Europe",
     "name": "Ukrainian SSR"
   },
@@ -3915,7 +3915,7 @@
     "name": "Ulaid"
   },
   {
-    "code": "Umayyad Caliphate",
+    "code": "Umayyad_Caliphate",
     "continent": "Asia",
     "name": "Umayyad Caliphate"
   },
@@ -3930,7 +3930,7 @@
     "name": "United Arab Emirates"
   },
   {
-    "code": "United Arab Republic",
+    "code": "United_Arab_Republic",
     "continent": "Asia",
     "name": "United Arab Republic"
   },
@@ -3949,7 +3949,7 @@
     "name": "United States of America"
   },
   {
-    "code": "Upper Silesia",
+    "code": "Upper_Silesia",
     "continent": "Europe",
     "name": "Upper Silesia"
   },
@@ -3969,7 +3969,7 @@
     "name": "Utah"
   },
   {
-    "code": "Uzbek SSR",
+    "code": "Uzbek_SSR",
     "continent": "Asia",
     "name": "Uzbek SSR"
   },
@@ -4014,7 +4014,7 @@
     "name": "Vermont"
   },
   {
-    "code": "Vermont Republic",
+    "code": "Vermont_Republic",
     "continent": "North America",
     "name": "Vermont Republic"
   },
@@ -4059,7 +4059,7 @@
     "name": "Votians"
   },
   {
-    "code": "Wa State",
+    "code": "Wa_State",
     "continent": "Asia",
     "name": "Wa State"
   },
@@ -4099,12 +4099,12 @@
     "name": "West Germany"
   },
   {
-    "code": "West Papua",
+    "code": "West_Papua",
     "continent": "Asia",
     "name": "West Papua"
   },
   {
-    "code": "West Roman Empire",
+    "code": "West_Roman_Empire",
     "continent": "Europe",
     "name": "West Roman Empire"
   },
@@ -4119,7 +4119,7 @@
     "name": "Western Sahara"
   },
   {
-    "code": "White Flag",
+    "code": "White_Flag",
     "name": "White Flag"
   },
   {

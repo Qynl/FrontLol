@@ -77,7 +77,7 @@
     },
     {
       "coordinates": [1707, 1018],
-      "flag": "1_East Anglia",
+      "flag": "1_East_Anglia",
       "name": "East Anglia"
     },
     {
@@ -112,7 +112,7 @@
     },
     {
       "coordinates": [564, 845],
-      "flag": "1_Southern Ui Neill",
+      "flag": "1_Southern_Ui_Neill",
       "name": "Southern Uí Néill"
     },
     {
@@ -127,7 +127,7 @@
     },
     {
       "coordinates": [416, 678],
-      "flag": "1_Northern Ui Neill",
+      "flag": "1_Northern_Ui_Neill",
       "name": "Northern Uí Néill"
     },
     {

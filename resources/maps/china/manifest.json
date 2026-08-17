@@ -2,47 +2,47 @@
   "additionalNations": [
     {
       "coordinates": [1639, 850],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Zhili"
     },
     {
       "coordinates": [1778, 830],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Shandong"
     },
     {
       "coordinates": [1456, 845],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Shanxi"
     },
     {
       "coordinates": [1426, 1010],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Henan"
     },
     {
       "coordinates": [1870, 1237],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Zhejiang"
     },
     {
       "coordinates": [1503, 1212],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Hubei"
     },
     {
       "coordinates": [1445, 1626],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Guangxi"
     },
     {
       "coordinates": [1239, 1074],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Shaanxi"
     },
     {
       "coordinates": [814, 1019],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Qinghai"
     },
     {
@@ -57,12 +57,12 @@
     },
     {
       "coordinates": [728, 669],
-      "flag": "Mongol Empire",
+      "flag": "Mongol_Empire",
       "name": "Kumul Khanate"
     },
     {
       "coordinates": [1041, 885],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Ningxia"
     },
     {
@@ -72,22 +72,22 @@
     },
     {
       "coordinates": [1657, 977],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Anhui"
     },
     {
       "coordinates": [1703, 1414],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Jiangxi"
     },
     {
       "coordinates": [1791, 690],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Fengtian"
     },
     {
       "coordinates": [231, 1104],
-      "flag": "Jammu and Kashmir",
+      "flag": "Jammu_and_Kashmir",
       "name": "Kashmir"
     },
     {
@@ -97,7 +97,7 @@
     },
     {
       "coordinates": [1530, 591],
-      "flag": "Empire of Japan",
+      "flag": "Empire_of_Japan",
       "name": "Mengjiang"
     },
     {
@@ -107,7 +107,7 @@
     },
     {
       "coordinates": [1422, 788],
-      "flag": "Republic of China",
+      "flag": "Republic_of_China",
       "name": "Shanxi Clique"
     },
     {
@@ -137,17 +137,17 @@
     },
     {
       "coordinates": [1033, 1577],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Yunnan Clique"
     },
     {
       "coordinates": [1220, 769],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Guominjun"
     },
     {
       "coordinates": [1314, 1220],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Sichuan Clique"
     }
   ],
@@ -173,12 +173,12 @@
   "nations": [
     {
       "coordinates": [1678, 1584],
-      "flag": "Flag_of_Hong_Kong_(1959-1997)",
+      "flag": "Flag_of_Hong_Kong_1959-1997",
       "name": "British Hong Kong"
     },
     {
       "coordinates": [1562, 1530],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Guangdong"
     },
     {
@@ -188,7 +188,7 @@
     },
     {
       "coordinates": [1729, 886],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Boxer Rebellion"
     },
     {
@@ -198,7 +198,7 @@
     },
     {
       "coordinates": [1197, 1299],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Sichuan"
     },
     {
@@ -213,7 +213,7 @@
     },
     {
       "coordinates": [1589, 775],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Peking"
     },
     {
@@ -248,7 +248,7 @@
     },
     {
       "coordinates": [845, 833],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Gansu"
     },
     {
@@ -258,32 +258,32 @@
     },
     {
       "coordinates": [1025, 1499],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Yunnan"
     },
     {
       "coordinates": [1563, 1120],
-      "flag": "Republic of China",
+      "flag": "Republic_of_China",
       "name": "Republic of China"
     },
     {
       "coordinates": [1504, 1773],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Hainan"
     },
     {
       "coordinates": [1775, 994],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Jiangsu"
     },
     {
       "coordinates": [1632, 1025],
-      "flag": "Republic of China",
+      "flag": "Republic_of_China",
       "name": "Anhui Clique"
     },
     {
       "coordinates": [1558, 943],
-      "flag": "Republic of China",
+      "flag": "Republic_of_China",
       "name": "Zhili Clique"
     },
     {
@@ -293,17 +293,17 @@
     },
     {
       "coordinates": [1945, 1447],
-      "flag": "Empire of Japan",
+      "flag": "Empire_of_Japan",
       "name": "Taiwan"
     },
     {
       "coordinates": [1832, 1395],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Fujian"
     },
     {
       "coordinates": [1519, 1364],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Hunan"
     },
     {
@@ -313,17 +313,17 @@
     },
     {
       "coordinates": [1319, 1400],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Guizhou"
     },
     {
       "coordinates": [1808, 605],
-      "flag": "Republic of China",
+      "flag": "Republic_of_China",
       "name": "Fengtian Clique"
     },
     {
       "coordinates": [1940, 427],
-      "flag": "Qing Dynasty",
+      "flag": "Qing_Dynasty",
       "name": "Jilin"
     },
     {

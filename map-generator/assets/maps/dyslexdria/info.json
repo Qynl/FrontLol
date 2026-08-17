@@ -114,7 +114,7 @@
     },
     {
       "coordinates": [130, 640],
-      "flag": "Russian SSR",
+      "flag": "Russian_SSR",
       "name": "Rusha"
     },
     {
@@ -134,7 +134,7 @@
     },
     {
       "coordinates": [1313, 666],
-      "flag": "Second Republic of Iraq",
+      "flag": "Second_Republic_of_Iraq",
       "name": "Irap"
     },
     {
@@ -144,7 +144,7 @@
     },
     {
       "coordinates": [560, 1080],
-      "flag": "Pahlavi Iran",
+      "flag": "Pahlavi_Iran",
       "name": "Iram"
     },
     {
@@ -329,7 +329,7 @@
     },
     {
       "coordinates": [1730, 920],
-      "flag": "Cthulhu Republic",
+      "flag": "Cthulhu_Republic",
       "name": "Anazom Warehouse"
     },
     {
@@ -399,7 +399,7 @@
     },
     {
       "coordinates": [3155, 55],
-      "flag": "Republic of Pirates",
+      "flag": "Republic_of_Pirates",
       "name": "Biosphere Conmune"
     }
   ],
@@ -982,7 +982,7 @@
       "name": "Tinland"
     },
     {
-      "flag": "Russian SSR",
+      "flag": "Russian_SSR",
       "name": "Ruszia"
     },
     {
@@ -990,7 +990,7 @@
       "name": "George"
     },
     {
-      "flag": "Second Republic of Iraq",
+      "flag": "Second_Republic_of_Iraq",
       "name": "Irad"
     },
     {
@@ -998,7 +998,7 @@
       "name": "Untitled Estimates"
     },
     {
-      "flag": "Pahlavi Iran",
+      "flag": "Pahlavi_Iran",
       "name": "Iriz"
     },
     {

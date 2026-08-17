@@ -108,12 +108,12 @@
     {
       "coordinates": [730, 666],
       "name": "Republika Srpska",
-      "flag": "Republika Srpska"
+      "flag": "Republika_Srpska"
     },
     {
       "coordinates": [1948, 80],
       "name": "Transnistria",
-      "flag": "Moldavian SSR"
+      "flag": "Moldavian_SSR"
     },
     {
       "coordinates": [79, 1635],
@@ -235,7 +235,7 @@
     {
       "coordinates": [1578, 87],
       "name": "Moldavia",
-      "flag": "Principality of Moldavia"
+      "flag": "Principality_of_Moldavia"
     },
     {
       "coordinates": [1065, 605],

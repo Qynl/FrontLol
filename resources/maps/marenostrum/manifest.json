@@ -186,7 +186,7 @@
     },
     {
       "coordinates": [2815, 659],
-      "flag": "Sassanid Empire",
+      "flag": "Sassanid_Empire",
       "name": "Sassanid Empire"
     },
     {
@@ -206,7 +206,7 @@
     },
     {
       "coordinates": [584, 1199],
-      "flag": "Amazigh flag",
+      "flag": "Amazigh_flag",
       "name": "Numidia"
     }
   ],

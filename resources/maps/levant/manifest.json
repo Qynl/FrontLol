@@ -2,237 +2,237 @@
   "additionalNations": [
     {
       "coordinates": [1406, 1485],
-      "flag": "Kingdom of Jerusalem",
+      "flag": "Kingdom_of_Jerusalem",
       "name": "Ascalon"
     },
     {
       "coordinates": [1376, 1575],
-      "flag": "Kingdom of Jerusalem",
+      "flag": "Kingdom_of_Jerusalem",
       "name": "Gaza"
     },
     {
       "coordinates": [1454, 1270],
-      "flag": "Kingdom of Jerusalem",
+      "flag": "Kingdom_of_Jerusalem",
       "name": "Acre"
     },
     {
       "coordinates": [1389, 313],
-      "flag": "Armenian Kingdom Of Cilicia",
+      "flag": "Armenian_Kingdom_Of_Cilicia",
       "name": "Tarsus"
     },
     {
       "coordinates": [1049, 222],
-      "flag": "Sultanate Of Rum",
+      "flag": "Sultanate_Of_Rum",
       "name": "Iconium"
     },
     {
       "coordinates": [1808, 425],
-      "flag": "Seljuk Empire",
+      "flag": "Seljuk_Empire",
       "name": "Aleppo"
     },
     {
       "coordinates": [1840, 232],
-      "flag": "County of Edessa",
+      "flag": "County_of_Edessa",
       "name": "Turbessel"
     },
     {
       "coordinates": [759, 1806],
-      "flag": "Ayyubid Dynasty",
+      "flag": "Ayyubid_Dynasty",
       "name": "Cairo"
     },
     {
       "coordinates": [489, 1632],
-      "flag": "Ayyubid Dynasty",
+      "flag": "Ayyubid_Dynasty",
       "name": "Alexandria"
     },
     {
       "coordinates": [790, 1564],
-      "flag": "Ayyubid Dynasty",
+      "flag": "Ayyubid_Dynasty",
       "name": "Damietta"
     },
     {
       "coordinates": [1035, 927],
-      "flag": "Kingdom Of Cyprus",
+      "flag": "Kingdom_Of_Cyprus",
       "name": "Nicossia"
     },
     {
       "coordinates": [921, 1049],
-      "flag": "Kingdom Of Cyprus",
+      "flag": "Kingdom_Of_Cyprus",
       "name": "Limasol"
     },
     {
       "coordinates": [1126, 955],
-      "flag": "Kingdom Of Cyprus",
+      "flag": "Kingdom_Of_Cyprus",
       "name": "Famagusta"
     },
     {
       "coordinates": [1597, 212],
-      "flag": "Armenian Kingdom Of Cilicia",
+      "flag": "Armenian_Kingdom_Of_Cilicia",
       "name": "Marach"
     },
     {
       "coordinates": [1183, 208],
-      "flag": "Sultanate Of Rum",
+      "flag": "Sultanate_Of_Rum",
       "name": "Heraclea"
     },
     {
       "coordinates": [1206, 464],
-      "flag": "Byzantine Empire",
+      "flag": "Byzantine_Empire",
       "name": "Seleucia"
     },
     {
       "coordinates": [636, 290],
-      "flag": "Byzantine Empire",
+      "flag": "Byzantine_Empire",
       "name": "Antalya"
     },
     {
       "coordinates": [77, 188],
-      "flag": "Byzantine Empire",
+      "flag": "Byzantine_Empire",
       "name": "Ephesus"
     },
     {
       "coordinates": [1224, 63],
-      "flag": "Sultanate Of Rum",
+      "flag": "Sultanate_Of_Rum",
       "name": "Caesarea"
     },
     {
       "coordinates": [1458, 167],
-      "flag": "Armenian Kingdom Of Cilicia",
+      "flag": "Armenian_Kingdom_Of_Cilicia",
       "name": "Sis"
     },
     {
       "coordinates": [1714, 22],
-      "flag": "County of Edessa",
+      "flag": "County_of_Edessa",
       "name": "Malatya"
     },
     {
       "coordinates": [1979, 79],
-      "flag": "County of Edessa",
+      "flag": "County_of_Edessa",
       "name": "Mardin"
     },
     {
       "coordinates": [1638, 585],
-      "flag": "Principality of Antioch",
+      "flag": "Principality_of_Antioch",
       "name": "Latakia"
     },
     {
       "coordinates": [1642, 766],
-      "flag": "County of Tripoli",
+      "flag": "County_of_Tripoli",
       "name": "Chastel Rouge"
     },
     {
       "coordinates": [1578, 1012],
-      "flag": "County of Tripoli",
+      "flag": "County_of_Tripoli",
       "name": "Gidelet"
     },
     {
       "coordinates": [1545, 1089],
-      "flag": "Kingdom of Jerusalem",
+      "flag": "Kingdom_of_Jerusalem",
       "name": "Beirut"
     },
     {
       "coordinates": [1632, 1135],
-      "flag": "Seljuk Empire",
+      "flag": "Seljuk_Empire",
       "name": "Baalbek"
     },
     {
       "coordinates": [1507, 1484],
-      "flag": "Kingdom of Jerusalem",
+      "flag": "Kingdom_of_Jerusalem",
       "name": "Bethlehem"
     },
     {
       "coordinates": [1454, 1922],
-      "flag": "Kingdom of Jerusalem",
+      "flag": "Kingdom_of_Jerusalem",
       "name": "Elim"
     },
     {
       "coordinates": [1467, 1621],
-      "flag": "Kingdom of Jerusalem",
+      "flag": "Kingdom_of_Jerusalem",
       "name": "Hebron"
     },
     {
       "coordinates": [1601, 1646],
-      "flag": "Kingdom of Jerusalem",
+      "flag": "Kingdom_of_Jerusalem",
       "name": "Kerak"
     },
     {
       "coordinates": [1753, 580],
-      "flag": "Principality of Antioch",
+      "flag": "Principality_of_Antioch",
       "name": "Maarra"
     },
     {
       "coordinates": [1500, 1177],
-      "flag": "Kingdom of Jerusalem",
+      "flag": "Kingdom_of_Jerusalem",
       "name": "Tyre"
     },
     {
       "coordinates": [1204, 1634],
-      "flag": "Ayyubid Dynasty",
+      "flag": "Ayyubid_Dynasty",
       "name": "El Arish"
     },
     {
       "coordinates": [1569, 1811],
-      "flag": "Kingdom of Jerusalem",
+      "flag": "Kingdom_of_Jerusalem",
       "name": "Petra"
     },
     {
       "coordinates": [1645, 1400],
-      "flag": "Kingdom of Jerusalem",
+      "flag": "Kingdom_of_Jerusalem",
       "name": "Ahamant"
     },
     {
       "coordinates": [1553, 1299],
-      "flag": "Kingdom of Jerusalem",
+      "flag": "Kingdom_of_Jerusalem",
       "name": "Tiberias"
     },
     {
       "coordinates": [1746, 1313],
-      "flag": "Seljuk Empire",
+      "flag": "Seljuk_Empire",
       "name": "Bostra"
     },
     {
       "coordinates": [1980, 728],
-      "flag": "Seljuk Empire",
+      "flag": "Seljuk_Empire",
       "name": "Tadmur"
     },
     {
       "coordinates": [1738, 683],
-      "flag": "Seljuk Empire",
+      "flag": "Seljuk_Empire",
       "name": "Hamah"
     },
     {
       "coordinates": [1733, 771],
-      "flag": "Seljuk Empire",
+      "flag": "Seljuk_Empire",
       "name": "Homs"
     },
     {
       "coordinates": [932, 396],
-      "flag": "Byzantine Empire",
+      "flag": "Byzantine_Empire",
       "name": "Coracesium"
     },
     {
       "coordinates": [505, 372],
-      "flag": "Byzantine Empire",
+      "flag": "Byzantine_Empire",
       "name": "Istanus"
     },
     {
       "coordinates": [180, 428],
-      "flag": "Order Of Malta",
+      "flag": "Order_Of_Malta",
       "name": "Rhodes"
     },
     {
       "coordinates": [351, 165],
-      "flag": "Byzantine Empire",
+      "flag": "Byzantine_Empire",
       "name": "Laodicea"
     },
     {
       "coordinates": [734, 30],
-      "flag": "Sultanate Of Rum",
+      "flag": "Sultanate_Of_Rum",
       "name": "Philomelion"
     },
     {
       "coordinates": [19, 1589],
-      "flag": "Ayyubid Dynasty",
+      "flag": "Ayyubid_Dynasty",
       "name": "Baritun"
     }
   ],
@@ -258,77 +258,77 @@
   "nations": [
     {
       "coordinates": [722, 1683],
-      "flag": "Fatimid Caliphate",
+      "flag": "Fatimid_Caliphate",
       "name": "Fatimid Caliphate"
     },
     {
       "coordinates": [1476, 1376],
-      "flag": "Kingdom of Jerusalem",
+      "flag": "Kingdom_of_Jerusalem",
       "name": "Kingdom of Jerusalem"
     },
     {
       "coordinates": [1627, 919],
-      "flag": "County of Tripoli",
+      "flag": "County_of_Tripoli",
       "name": "County of Tripoli"
     },
     {
       "coordinates": [1673, 442],
-      "flag": "Principality of Antioch",
+      "flag": "Principality_of_Antioch",
       "name": "Principality of Antioch"
     },
     {
       "coordinates": [1880, 80],
-      "flag": "County of Edessa",
+      "flag": "County_of_Edessa",
       "name": "County of Edessa"
     },
     {
       "coordinates": [987, 957],
-      "flag": "Kingdom Of Cyprus",
+      "flag": "Kingdom_Of_Cyprus",
       "name": "Kingdom of Cyprus"
     },
     {
       "coordinates": [1659, 1214],
-      "flag": "Seljuk Empire",
+      "flag": "Seljuk_Empire",
       "name": "Emirate of Damascus"
     },
     {
       "coordinates": [1980, 412],
-      "flag": "Seljuk Empire",
+      "flag": "Seljuk_Empire",
       "name": "Seljuk Empire"
     },
     {
       "coordinates": [975, 37],
-      "flag": "Sultanate Of Rum",
+      "flag": "Sultanate_Of_Rum",
       "name": "Sultanate of Rum"
     },
     {
       "coordinates": [1336, 317],
-      "flag": "Armenian Kingdom Of Cilicia",
+      "flag": "Armenian_Kingdom_Of_Cilicia",
       "name": "Armenian Kingdom Of Cilicia"
     },
     {
       "coordinates": [520, 216],
-      "flag": "Byzantine Empire",
+      "flag": "Byzantine_Empire",
       "name": "Byzantine Empire"
     },
     {
       "coordinates": [1443, 41],
-      "flag": "Seljuk Empire",
+      "flag": "Seljuk_Empire",
       "name": "Danishmendid Beylik"
     },
     {
       "coordinates": [1654, 1978],
-      "flag": "Ayyubid Dynasty",
+      "flag": "Ayyubid_Dynasty",
       "name": "Sharifate of Mecca"
     },
     {
       "coordinates": [846, 1681],
-      "flag": "Ayyubid Dynasty",
+      "flag": "Ayyubid_Dynasty",
       "name": "Ayyubid Dynasty"
     },
     {
       "coordinates": [140, 480],
-      "flag": "Order Of Malta",
+      "flag": "Order_Of_Malta",
       "name": "Knights Hospitaller"
     }
   ],

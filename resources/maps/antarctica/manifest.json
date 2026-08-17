@@ -1,7 +1,7 @@
 {
   "additionalNations": [
     {
-      "flag": "Cthulhu Republic",
+      "flag": "Cthulhu_Republic",
       "name": "Ancient Aliens"
     },
     {
@@ -55,12 +55,12 @@
     },
     {
       "coordinates": [945, 885],
-      "flag": "British Antarctic Territory",
+      "flag": "British_Antarctic_Territory",
       "name": "British Antarctic Territory"
     },
     {
       "coordinates": [637, 1061],
-      "flag": "Tierra del Fuego",
+      "flag": "Tierra_del_Fuego",
       "name": "Argentine Territory"
     },
     {

@@ -195,7 +195,7 @@
     {
       "coordinates": [590, 1684],
       "name": "Moskitia",
-      "flag": "Mosquito Kingdom"
+      "flag": "Mosquito_Kingdom"
     },
     {
       "coordinates": [1127, 1495],
@@ -300,7 +300,7 @@
     {
       "coordinates": [1029, 437],
       "name": "Republic of Pirates",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "coordinates": [565, 939],

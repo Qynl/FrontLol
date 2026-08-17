@@ -96,22 +96,22 @@
     },
     {
       "coordinates": [1683, 1414],
-      "flag": "Kazakh SSR",
+      "flag": "Kazakh_SSR",
       "name": "Kazakh SSR"
     },
     {
       "coordinates": [1709, 1603],
-      "flag": "Uzbek SSR",
+      "flag": "Uzbek_SSR",
       "name": "Uzbek SSR"
     },
     {
       "coordinates": [1784, 1744],
-      "flag": "Turkmen SSR",
+      "flag": "Turkmen_SSR",
       "name": "Turkmen SSR"
     },
     {
       "coordinates": [1803, 1265],
-      "flag": "Kirghiz SSR",
+      "flag": "Kirghiz_SSR",
       "name": "Kirghiz SSR"
     },
     {
@@ -131,17 +131,17 @@
     },
     {
       "coordinates": [1333, 1774],
-      "flag": "Ukrainian SSR",
+      "flag": "Ukrainian_SSR",
       "name": "Ukrainian SSR"
     },
     {
       "coordinates": [1194, 1814],
-      "flag": "Moldavian SSR",
+      "flag": "Moldavian_SSR",
       "name": "Moldavian SSR"
     },
     {
       "coordinates": [1197, 1626],
-      "flag": "Byelorussian SSR",
+      "flag": "Byelorussian_SSR",
       "name": "Byelorussian SSR"
     },
     {
@@ -151,17 +151,17 @@
     },
     {
       "coordinates": [1805, 1486],
-      "flag": "Tajik SSR",
+      "flag": "Tajik_SSR",
       "name": "Tajik SSR"
     },
     {
       "coordinates": [1442, 1807],
-      "flag": "Georgian SSR",
+      "flag": "Georgian_SSR",
       "name": "Georgian SSR"
     },
     {
       "coordinates": [1573, 1790],
-      "flag": "Azerbaijan SSR",
+      "flag": "Azerbaijan_SSR",
       "name": "Azerbaijan SSR"
     },
     {
@@ -206,7 +206,7 @@
     },
     {
       "coordinates": [1410, 625],
-      "flag": "Russian SSR",
+      "flag": "Russian_SSR",
       "name": "Yakut ASSR"
     },
     {
@@ -216,12 +216,12 @@
     },
     {
       "coordinates": [1664, 689],
-      "flag": "Russian SSR",
+      "flag": "Russian_SSR",
       "name": "Buryat ASSR"
     },
     {
       "coordinates": [1440, 1170],
-      "flag": "Russian SSR",
+      "flag": "Russian_SSR",
       "name": "Komi ASSR"
     },
     {

@@ -83,22 +83,22 @@
     {
       "coordinates": [1683, 1414],
       "name": "Kazakh SSR",
-      "flag": "Kazakh SSR"
+      "flag": "Kazakh_SSR"
     },
     {
       "coordinates": [1709, 1603],
       "name": "Uzbek SSR",
-      "flag": "Uzbek SSR"
+      "flag": "Uzbek_SSR"
     },
     {
       "coordinates": [1784, 1744],
       "name": "Turkmen SSR",
-      "flag": "Turkmen SSR"
+      "flag": "Turkmen_SSR"
     },
     {
       "coordinates": [1803, 1265],
       "name": "Kirghiz SSR",
-      "flag": "Kirghiz SSR"
+      "flag": "Kirghiz_SSR"
     },
     {
       "coordinates": [745, 1736],
@@ -118,17 +118,17 @@
     {
       "coordinates": [1333, 1774],
       "name": "Ukrainian SSR",
-      "flag": "Ukrainian SSR"
+      "flag": "Ukrainian_SSR"
     },
     {
       "coordinates": [1194, 1814],
       "name": "Moldavian SSR",
-      "flag": "Moldavian SSR"
+      "flag": "Moldavian_SSR"
     },
     {
       "coordinates": [1197, 1626],
       "name": "Byelorussian SSR",
-      "flag": "Byelorussian SSR"
+      "flag": "Byelorussian_SSR"
     },
     {
       "coordinates": [1091, 1744],
@@ -138,17 +138,17 @@
     {
       "coordinates": [1805, 1486],
       "name": "Tajik SSR",
-      "flag": "Tajik SSR"
+      "flag": "Tajik_SSR"
     },
     {
       "coordinates": [1442, 1807],
       "name": "Georgian SSR",
-      "flag": "Georgian SSR"
+      "flag": "Georgian_SSR"
     },
     {
       "coordinates": [1573, 1790],
       "name": "Azerbaijan SSR",
-      "flag": "Azerbaijan SSR"
+      "flag": "Azerbaijan_SSR"
     },
     {
       "coordinates": [1089, 1519],
@@ -193,7 +193,7 @@
     {
       "coordinates": [1410, 625],
       "name": "Yakut ASSR",
-      "flag": "Russian SSR"
+      "flag": "Russian_SSR"
     },
     {
       "coordinates": [1817, 364],
@@ -203,12 +203,12 @@
     {
       "coordinates": [1664, 689],
       "name": "Buryat ASSR",
-      "flag": "Russian SSR"
+      "flag": "Russian_SSR"
     },
     {
       "coordinates": [1440, 1170],
       "name": "Komi ASSR",
-      "flag": "Russian SSR"
+      "flag": "Russian_SSR"
     },
     {
       "coordinates": [1383, 875],

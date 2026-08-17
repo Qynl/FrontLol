@@ -27,7 +27,7 @@
     },
     {
       "name": "Flying Dutchman",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Duck Boat",
@@ -35,7 +35,7 @@
     },
     {
       "name": "Queen Annes Revenge",
-      "flag": "Republic of Pirates"
+      "flag": "Republic_of_Pirates"
     },
     {
       "name": "Sea Diamond",
@@ -478,7 +478,7 @@
     },
     {
       "name": "MV Wilhelm Gustloff",
-      "flag": "East Germany"
+      "flag": "east_germany"
     },
     {
       "name": "SS Thistlegorm",
@@ -570,7 +570,7 @@
     },
     {
       "name": "Liberte",
-      "flag": "East Germany"
+      "flag": "east_germany"
     },
     {
       "name": "SS Sirio",

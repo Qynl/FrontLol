@@ -155,7 +155,7 @@
     {
       "coordinates": [1668, 946],
       "name": "North Karelia",
-      "flag": "North karelia"
+      "flag": "North_karelia"
     },
     {
       "coordinates": [1545, 980],
@@ -235,7 +235,7 @@
     {
       "coordinates": [1290, 342],
       "name": "Sapmi",
-      "flag": "Sami flag"
+      "flag": "Sami_flag"
     },
     {
       "coordinates": [971, 877],

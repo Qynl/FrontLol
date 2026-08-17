@@ -38,7 +38,7 @@
     },
     {
       "coordinates": [1872, 528],
-      "flag": "Fascist Spain",
+      "flag": "Fascist_Spain",
       "name": "Spain"
     },
     {
@@ -78,7 +78,7 @@
     },
     {
       "coordinates": [2242, 461],
-      "flag": "Communist Romania",
+      "flag": "Communist_Romania",
       "name": "Romania"
     },
     {
@@ -88,7 +88,7 @@
     },
     {
       "coordinates": [2272, 418],
-      "flag": "Ukrainian SSR",
+      "flag": "Ukrainian_SSR",
       "name": "Ukrainian SSR"
     },
     {
@@ -103,7 +103,7 @@
     },
     {
       "coordinates": [2191, 194],
-      "flag": "Sami flag",
+      "flag": "Sami_flag",
       "name": "Sapmi"
     },
     {
@@ -113,22 +113,22 @@
     },
     {
       "coordinates": [2376, 363],
-      "flag": "Russian SSR",
+      "flag": "Russian_SSR",
       "name": "Russian SSR"
     },
     {
       "coordinates": [2222, 371],
-      "flag": "Byelorussian SSR",
+      "flag": "Byelorussian_SSR",
       "name": "Byelorussian SSR"
     },
     {
       "coordinates": [2441, 507],
-      "flag": "Georgian SSR",
+      "flag": "Georgian_SSR",
       "name": "Georgian SSR"
     },
     {
       "coordinates": [2402, 580],
-      "flag": "Second Republic of Iraq",
+      "flag": "Second_Republic_of_Iraq",
       "name": "Iraq"
     },
     {
@@ -143,12 +143,12 @@
     },
     {
       "coordinates": [2434, 815],
-      "flag": "North yemen",
+      "flag": "North_yemen",
       "name": "North Yemen"
     },
     {
       "coordinates": [2479, 824],
-      "flag": "south yemen",
+      "flag": "south_yemen",
       "name": "South Yemen"
     },
     {
@@ -158,7 +158,7 @@
     },
     {
       "coordinates": [2532, 609],
-      "flag": "Pahlavi Iran",
+      "flag": "Pahlavi_Iran",
       "name": "Iran"
     },
     {
@@ -173,12 +173,12 @@
     },
     {
       "coordinates": [2727, 416],
-      "flag": "Kazakh SSR",
+      "flag": "Kazakh_SSR",
       "name": "Kazakh SSR"
     },
     {
       "coordinates": [2556, 544],
-      "flag": "Turkmen SSR",
+      "flag": "Turkmen_SSR",
       "name": "Turkmen SSR"
     },
     {
@@ -248,7 +248,7 @@
     },
     {
       "coordinates": [3153, 833],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "South Vietnam"
     },
     {
@@ -273,7 +273,7 @@
     },
     {
       "coordinates": [3422, 1203],
-      "flag": "Australian Aboriginal Flag",
+      "flag": "Australian_Aboriginal_Flag",
       "name": "Nawan-mirri"
     },
     {
@@ -298,7 +298,7 @@
     },
     {
       "coordinates": [2281, 653],
-      "flag": "United Arab Republic",
+      "flag": "United_Arab_Republic",
       "name": "United Arab Republic"
     },
     {
@@ -323,7 +323,7 @@
     },
     {
       "coordinates": [2352, 895],
-      "flag": "Imperial Ethiopia",
+      "flag": "Imperial_Ethiopia",
       "name": "Ethiopia"
     },
     {
@@ -363,7 +363,7 @@
     },
     {
       "coordinates": [2189, 1372],
-      "flag": "Apartheid South Africa",
+      "flag": "Apartheid_South_Africa",
       "name": "South Africa"
     },
     {
@@ -388,7 +388,7 @@
     },
     {
       "coordinates": [2128, 1292],
-      "flag": "Apartheid South Africa",
+      "flag": "Apartheid_South_Africa",
       "name": "South West Africa"
     },
     {

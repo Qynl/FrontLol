@@ -8,52 +8,52 @@
     {
       "coordinates": [37, 227],
       "name": "Agder",
-      "flag": "Sweden Norway Union"
+      "flag": "Sweden_Norway_Union"
     },
     {
       "coordinates": [252, 43],
       "name": "Østlandet",
-      "flag": "Sweden Norway Union"
+      "flag": "Sweden_Norway_Union"
     },
     {
       "coordinates": [737, 791],
       "name": "Skåne",
-      "flag": "Sweden Norway Union"
+      "flag": "Sweden_Norway_Union"
     },
     {
       "coordinates": [646, 566],
       "name": "Halland",
-      "flag": "Sweden Norway Union"
+      "flag": "Sweden_Norway_Union"
     },
     {
       "coordinates": [846, 488],
       "name": "Småland",
-      "flag": "Sweden Norway Union"
+      "flag": "Sweden_Norway_Union"
     },
     {
       "coordinates": [701, 260],
       "name": "Västergötland",
-      "flag": "Sweden Norway Union"
+      "flag": "Sweden_Norway_Union"
     },
     {
       "coordinates": [501, 273],
       "name": "Bohuslän",
-      "flag": "Sweden Norway Union"
+      "flag": "Sweden_Norway_Union"
     },
     {
       "coordinates": [843, 278],
       "name": "Östergötland",
-      "flag": "Sweden Norway Union"
+      "flag": "Sweden_Norway_Union"
     },
     {
       "coordinates": [579, 45],
       "name": "Dalsland",
-      "flag": "Sweden Norway Union"
+      "flag": "Sweden_Norway_Union"
     },
     {
       "coordinates": [833, 73],
       "name": "Närke",
-      "flag": "Sweden Norway Union"
+      "flag": "Sweden_Norway_Union"
     },
     {
       "coordinates": [510, 821],
@@ -78,7 +78,7 @@
     {
       "coordinates": [585, 1182],
       "name": "Mecklenburg-Schwerin",
-      "flag": "German Confederation"
+      "flag": "German_Confederation"
     },
     {
       "coordinates": [846, 1131],
@@ -88,12 +88,12 @@
     {
       "coordinates": [59, 1201],
       "name": "Oldenburg",
-      "flag": "German Confederation"
+      "flag": "German_Confederation"
     },
     {
       "coordinates": [302, 1143],
       "name": "Hamburg",
-      "flag": "German Confederation"
+      "flag": "German_Confederation"
     },
     {
       "coordinates": [219, 1205],

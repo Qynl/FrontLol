@@ -28,12 +28,12 @@
     {
       "coordinates": [945, 885],
       "name": "British Antarctic Territory",
-      "flag": "British Antarctic Territory"
+      "flag": "British_Antarctic_Territory"
     },
     {
       "coordinates": [637, 1061],
       "name": "Argentine Territory",
-      "flag": "Tierra del Fuego"
+      "flag": "Tierra_del_Fuego"
     },
     {
       "coordinates": [565, 1083],
@@ -159,7 +159,7 @@
   "additionalNations": [
     {
       "name": "Ancient Aliens",
-      "flag": "Cthulhu Republic"
+      "flag": "Cthulhu_Republic"
     },
     {
       "name": "Penguins",

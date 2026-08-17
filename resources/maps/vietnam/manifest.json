@@ -57,47 +57,47 @@
     },
     {
       "coordinates": [1656, 2179],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Quang Ngai"
     },
     {
       "coordinates": [1693, 2401],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Gia Lai"
     },
     {
       "coordinates": [1744, 2797],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Khanh Hoa"
     },
     {
       "coordinates": [1373, 2862],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Dong Nai"
     },
     {
       "coordinates": [1034, 3089],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Dong Thap"
     },
     {
       "coordinates": [1146, 3248],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Vinh Long"
     },
     {
       "coordinates": [885, 3379],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Ca Mau"
     },
     {
       "coordinates": [898, 3175],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "An Giang"
     },
     {
       "coordinates": [1180, 2921],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Tay Ninh"
     }
   ],
@@ -123,37 +123,37 @@
   "nations": [
     {
       "coordinates": [1227, 3020],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Saigon"
     },
     {
       "coordinates": [1038, 3287],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Can Tho"
     },
     {
       "coordinates": [1670, 2588],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Dak Lak"
     },
     {
       "coordinates": [1633, 1983],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Da Nang"
     },
     {
       "coordinates": [1549, 2868],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Lam Dong"
     },
     {
       "coordinates": [1547, 1822],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Hue"
     },
     {
       "coordinates": [617, 3129],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Phu Quoc"
     },
     {
@@ -163,7 +163,7 @@
     },
     {
       "coordinates": [1248, 1584],
-      "flag": "South Vietnam",
+      "flag": "South_Vietnam",
       "name": "Quang Tri"
     },
     {

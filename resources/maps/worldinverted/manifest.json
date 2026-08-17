@@ -17,7 +17,7 @@
       "name": "SS Royston Grange"
     },
     {
-      "flag": "East Germany",
+      "flag": "east_germany",
       "name": "MV Wilhelm Gustloff"
     },
     {
@@ -109,7 +109,7 @@
       "name": "Sekirei Maru"
     },
     {
-      "flag": "East Germany",
+      "flag": "east_germany",
       "name": "Liberte"
     },
     {
@@ -992,7 +992,7 @@
       "name": "Rouse Simmons"
     },
     {
-      "flag": "Republic of Pirates",
+      "flag": "Republic_of_Pirates",
       "name": "Flying Dutchman"
     },
     {
@@ -1000,7 +1000,7 @@
       "name": "Duck Boat"
     },
     {
-      "flag": "Republic of Pirates",
+      "flag": "Republic_of_Pirates",
       "name": "Queen Annes Revenge"
     },
     {
