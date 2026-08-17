@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { gunzipSync } from "zlib";
 import {
   Difficulty,
   Game,
@@ -44,8 +45,8 @@ export async function setup(
     `../testdata/maps/${mapName}/manifest.json`,
   );
 
-  const mapBinBuffer = fs.readFileSync(mapBinPath);
-  const miniMapBinBuffer = fs.readFileSync(miniMapBinPath);
+  const mapBinBuffer = readMapBin(mapBinPath);
+  const miniMapBinBuffer = readMapBin(miniMapBinPath);
   const manifest = JSON.parse(
     fs.readFileSync(manifestPath, "utf8"),
   ) satisfies MapManifest;
@@ -78,4 +79,14 @@ export async function setup(
 
 export function playerInfo(name: string, type: PlayerType): PlayerInfo {
   return new PlayerInfo(name, type, null, name);
+}
+
+// Reads a map binary that may be stored gzip-compressed (e.g. the large
+// giantworldmap fixture) so deploy/source-read limits are respected.
+function readMapBin(filePath: string): Buffer {
+  const gzPath = `${filePath}.gz`;
+  if (fs.existsSync(gzPath)) {
+    return gunzipSync(fs.readFileSync(gzPath));
+  }
+  return fs.readFileSync(filePath);
 }

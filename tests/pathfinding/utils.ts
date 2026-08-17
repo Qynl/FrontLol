@@ -1,6 +1,7 @@
 import fs from "fs";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
+import { gunzipSync } from "zlib";
 import {
   Difficulty,
   Game,
@@ -233,12 +234,12 @@ export async function setupFromPath(
   const miniMapBinPath = path.join(mapDirectory, mapName, "map4x.bin");
   const manifestPath = path.join(mapDirectory, mapName, "manifest.json");
 
-  // Check if files exist
-  if (!fs.existsSync(mapBinPath)) {
+  // Check if files exist (either raw or gzip-compressed)
+  if (!fs.existsSync(mapBinPath) && !fs.existsSync(`${mapBinPath}.gz`)) {
     throw new Error(`Map not found: ${mapBinPath}`);
   }
 
-  if (!fs.existsSync(miniMapBinPath)) {
+  if (!fs.existsSync(miniMapBinPath) && !fs.existsSync(`${miniMapBinPath}.gz`)) {
     throw new Error(`Mini map not found: ${miniMapBinPath}`);
   }
 
@@ -246,8 +247,8 @@ export async function setupFromPath(
     throw new Error(`Manifest not found: ${manifestPath}`);
   }
 
-  const mapBinBuffer = fs.readFileSync(mapBinPath);
-  const miniMapBinBuffer = fs.readFileSync(miniMapBinPath);
+  const mapBinBuffer = readMapBin(mapBinPath);
+  const miniMapBinBuffer = readMapBin(miniMapBinPath);
   const manifest = JSON.parse(
     fs.readFileSync(manifestPath, "utf8"),
   ) satisfies MapManifest;
@@ -277,4 +278,14 @@ export async function setupFromPath(
   );
 
   return createGame(humans, [], gameMap, miniGameMap, config);
+}
+
+// Reads a map binary that may be stored gzip-compressed (e.g. the large
+// giantworldmap fixture) so deploy/source-read limits are respected.
+function readMapBin(filePath: string): Buffer {
+  const gzPath = `${filePath}.gz`;
+  if (fs.existsSync(gzPath)) {
+    return gunzipSync(fs.readFileSync(gzPath));
+  }
+  return fs.readFileSync(filePath);
 }
