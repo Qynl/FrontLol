@@ -5,6 +5,8 @@ out/
 static/
 dist/
 coverage/
+# stale copy of resources/ from a previous static-build attempt
+isolate/
 TODO.txt
 resources/images/.DS_Store
 resources/.DS_Store

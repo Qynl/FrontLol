@@ -1,5 +1,6 @@
 import { AllPlayersStats, ClientID, Winner } from "../Schemas";
 import {
+  DestroyerState,
   EmojiMessage,
   GameUpdates,
   Gold,
@@ -189,6 +190,7 @@ export interface UnitUpdate {
   reachedTarget: boolean;
   warshipState?: WarshipState;
   submarineState?: SubmarineState;
+  destroyerState?: DestroyerState;
   transportShipState?: TransportShipState;
   nukeState?: NukeState;
   targetable: boolean;

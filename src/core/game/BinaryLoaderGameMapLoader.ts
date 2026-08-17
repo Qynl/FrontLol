@@ -1,6 +1,7 @@
 import { assetUrl } from "../AssetUrls";
 import { GameMapType } from "./Game";
 import { GameMapLoader, MapData } from "./GameMapLoader";
+import { decompressGzip } from "./Gzip";
 import { MapManifest } from "./TerrainMapLoader";
 
 export class BinaryLoaderGameMapLoader implements GameMapLoader {
@@ -35,17 +36,17 @@ export class BinaryLoaderGameMapLoader implements GameMapLoader {
           if (!res.ok) throw new Error(`Failed to load ${url}`);
           return res.arrayBuffer();
         })
-        .then((buf) => new Uint8Array(buf));
+        .then((buf) => decompressGzip(new Uint8Array(buf)));
 
     const mapAssetUrl = (path: string) => assetUrl(`maps/${fileName}/${path}`);
 
     const mapData = {
-      mapBin: this.createLazyLoader(() => loadBinary(mapAssetUrl("map.bin"))),
+      mapBin: this.createLazyLoader(() => loadBinary(mapAssetUrl("map.bin.gz"))),
       map4xBin: this.createLazyLoader(() =>
-        loadBinary(mapAssetUrl("map4x.bin")),
+        loadBinary(mapAssetUrl("map4x.bin.gz")),
       ),
       map16xBin: this.createLazyLoader(() =>
-        loadBinary(mapAssetUrl("map16x.bin")),
+        loadBinary(mapAssetUrl("map16x.bin.gz")),
       ),
       manifest: this.createLazyLoader(() =>
         fetch(mapAssetUrl("manifest.json")).then((res) => {

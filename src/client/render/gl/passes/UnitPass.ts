@@ -27,6 +27,7 @@
  *   Col 10: Train Carriage (5×5)
  *   Col 11: Train Carriage Loaded (5×5)
  *   Col 12: Submarine (11×11)
+ *   Col 13: Destroyer (11×11)
  *
  * Data flow:
  *   FrameSnapshot.units → filter by typeToAtlasIdx → instance VBO → GPU
@@ -40,6 +41,7 @@ import {
   SMOOTHED_NUKE_TYPES,
   TrainType,
   UT_ATOM_BOMB,
+  UT_DESTROYER,
   UT_HYDROGEN_BOMB,
   UT_MIRV,
   UT_MIRV_WARHEAD,
@@ -87,6 +89,7 @@ const UNIT_ORDER = [
   "TrainCarriage",
   "TrainCarriageLoaded",
   UT_SUBMARINE,
+  UT_DESTROYER,
 ] as const;
 
 const ATLAS_COLS = UNIT_ORDER.length;
@@ -468,7 +471,8 @@ export class UnitPass {
       const isRetreatingWarship =
         unit.unitType === UT_WARSHIP && unit.retreating;
       const isAngryWarship =
-        unit.unitType === UT_WARSHIP && unit.targetUnitId !== null;
+        (unit.unitType === UT_WARSHIP || unit.unitType === UT_DESTROYER) &&
+        unit.targetUnitId !== null;
       const isFlicker = FLICKER_TYPES.has(unit.unitType);
 
       // Enemy trade ships heading to a self/allied port get FLAG_TRADE_FRIENDLY

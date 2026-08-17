@@ -1,5 +1,6 @@
 import { GameMapType } from "./Game";
 import { GameMapLoader, MapData } from "./GameMapLoader";
+import { decompressGzip } from "./Gzip";
 
 export class FetchGameMapLoader implements GameMapLoader {
   private maps: Map<GameMapType, MapData>;
@@ -26,9 +27,11 @@ export class FetchGameMapLoader implements GameMapLoader {
     }
 
     const mapData = {
-      mapBin: () => this.loadBinaryFromUrl(this.url(fileName, "map.bin")),
-      map4xBin: () => this.loadBinaryFromUrl(this.url(fileName, "map4x.bin")),
-      map16xBin: () => this.loadBinaryFromUrl(this.url(fileName, "map16x.bin")),
+      mapBin: () => this.loadBinaryFromUrl(this.url(fileName, "map.bin.gz")),
+      map4xBin: () =>
+        this.loadBinaryFromUrl(this.url(fileName, "map4x.bin.gz")),
+      map16xBin: () =>
+        this.loadBinaryFromUrl(this.url(fileName, "map16x.bin.gz")),
       manifest: () => this.loadJsonFromUrl(this.url(fileName, "manifest.json")),
       webpPath: this.url(fileName, "thumbnail.webp"),
       layerPng: (layerId: string) =>
@@ -59,10 +62,11 @@ export class FetchGameMapLoader implements GameMapLoader {
     }
 
     const data = await response.arrayBuffer();
+    const decompressed = await decompressGzip(new Uint8Array(data));
     console.log(
       `[MapLoader] ${url}: ${(performance.now() - startTime).toFixed(0)}ms`,
     );
-    return new Uint8Array(data);
+    return decompressed;
   }
 
   private async loadJsonFromUrl(url: string) {

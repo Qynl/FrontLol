@@ -17,7 +17,12 @@ import { Emoji, findClosestBy, flattenedEmojiTable } from "../../../core/Util";
 import { UIState } from "../../UIState";
 import { renderNumber, translateText } from "../../Utils";
 import { GameView, PlayerView } from "../../view";
-import { BuildItemDisplay, BuildMenu, flattenedBuildTable } from "./BuildMenu";
+import {
+  BuildItemDisplay,
+  BuildMenu,
+  flattenedBuildTable,
+  waterBuildTable,
+} from "./BuildMenu";
 import { ChatIntegration } from "./ChatIntegration";
 import { EmojiTable } from "./EmojiTable";
 import { PlayerActionHandler } from "./PlayerActionHandler";
@@ -410,6 +415,56 @@ function getAllEnabledUnits(
   return units;
 }
 
+/**
+ * Build the nested "Water Troops" submenu shown when the warship gateway is
+ * opened from the radial build/attack wheel. Mirrors the DOM BuildMenu's
+ * water submenu (warship today, submarine now, more to come).
+ */
+function createWaterTroopMenuElements(
+  params: MenuElementParams,
+  elementIdPrefix: string,
+): MenuElement[] {
+  return waterBuildTable.map((item) => ({
+    id: `${elementIdPrefix}_water_${item.unitType}`,
+    name: item.key
+      ? item.key.replace("unit_type.", "")
+      : item.unitType.toString(),
+    disabled: (p: MenuElementParams) => {
+      const buildableUnit = p.playerActions.buildableUnits.find(
+        (bu) => bu.type === item.unitType,
+      );
+      return buildableUnit === undefined || buildableUnit.canBuild === false;
+    },
+    color: COLORS.boat,
+    icon: item.icon,
+    tooltipItems: [
+      { text: translateText(item.key ?? ""), className: "title" },
+      {
+        text: translateText(item.description ?? ""),
+        className: "description",
+      },
+      {
+        text: `${renderNumber(params.buildMenu.cost(item))} ${translateText("player_panel.gold")}`,
+        className: "cost",
+      },
+      item.countable
+        ? { text: `${params.buildMenu.count(item)}x`, className: "count" }
+        : null,
+    ].filter(
+      (tooltipItem): tooltipItem is TooltipItem => tooltipItem !== null,
+    ),
+    action: (p: MenuElementParams) => {
+      const buildableUnit = p.playerActions.buildableUnits.find(
+        (bu) => bu.type === item.unitType,
+      );
+      if (buildableUnit !== undefined && buildableUnit.canBuild !== false) {
+        p.eventBus.emit(new BuildUnitIntentEvent(buildableUnit.type, p.tile));
+      }
+      p.closeMenu();
+    },
+  }));
+}
+
 function createMenuElements(
   params: MenuElementParams,
   filterType: "attack" | "build",
@@ -429,7 +484,8 @@ function createMenuElements(
           : !BuildableAttacks.has(item.unitType)),
     )
     .map((item: BuildItemDisplay) => {
-      return {
+      const isWaterTroopGateway = item.gateway === true;
+      const base: MenuElement = {
         id: `${elementIdPrefix}_${item.unitType}`,
         name: item.key
           ? item.key.replace("unit_type.", "")
@@ -449,11 +505,14 @@ function createMenuElements(
             text: translateText(item.description ?? ""),
             className: "description",
           },
-          {
-            text: `${renderNumber(params.buildMenu.cost(item))} ${translateText("player_panel.gold")}`,
-            className: "cost",
-          },
-          item.countable
+          // Gateway buttons open a sub-menu; they carry no cost of their own.
+          item.gateway
+            ? null
+            : {
+                text: `${renderNumber(params.buildMenu.cost(item))} ${translateText("player_panel.gold")}`,
+                className: "cost",
+              },
+          item.countable && !item.gateway
             ? { text: `${params.buildMenu.count(item)}x`, className: "count" }
             : null,
         ].filter(
@@ -586,6 +645,21 @@ function createMenuElements(
           params.closeMenu();
         },
       };
+
+      if (isWaterTroopGateway) {
+        // The "Water Troops" button is the gateway into the nested sub-menu —
+        // the same pattern as the DOM BuildMenu. It lists every naval combat
+        // unit instead of building one directly on click.
+        return {
+          ...base,
+          color: COLORS.boat,
+          disabled: () => false,
+          action: undefined,
+          subMenu: (params: MenuElementParams) =>
+            createWaterTroopMenuElements(params, elementIdPrefix),
+        };
+      }
+      return base;
     });
 }
 

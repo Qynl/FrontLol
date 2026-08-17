@@ -18,6 +18,7 @@ import {
   atomBombIcon,
   cityIcon,
   defensePostIcon,
+  destroyerIcon,
   factoryIcon,
   goldCoinIcon,
   hydrogenBombIcon,
@@ -39,6 +40,7 @@ export class UnitDisplay extends LitElement implements Controller {
   private _cities = 0;
   private _warships = 0;
   private _submarines = 0;
+  private _destroyers = 0;
   private _factories = 0;
   private _missileSilo = 0;
   private _port = 0;
@@ -83,6 +85,7 @@ export class UnitDisplay extends LitElement implements Controller {
         );
       case UnitType.Warship:
       case UnitType.Submarine:
+      case UnitType.Destroyer:
         return (
           this.cost(item) <= (player?.gold() ?? 0n) &&
           (player?.units(UnitType.Port).length ?? 0) > 0
@@ -106,6 +109,7 @@ export class UnitDisplay extends LitElement implements Controller {
     this._factories = player.totalUnitLevels(UnitType.Factory);
     this._warships = player.totalUnitLevels(UnitType.Warship);
     this._submarines = player.totalUnitLevels(UnitType.Submarine);
+    this._destroyers = player.totalUnitLevels(UnitType.Destroyer);
     this.requestUpdate();
   }
 
@@ -124,8 +128,8 @@ export class UnitDisplay extends LitElement implements Controller {
     }
 
     return html`
-      <div class="border-t border-white/10 p-0.5 w-full">
-        <div class="grid grid-rows-1 grid-flow-col gap-0.5 w-fit mx-auto">
+      <div class="border-t border-white/10 p-0.5 w-full overflow-x-auto">
+        <div class="grid grid-rows-1 grid-flow-col gap-0.5 w-max mx-auto">
           ${this.renderUnitItem(
             cityIcon,
             this._cities,
@@ -180,6 +184,13 @@ export class UnitDisplay extends LitElement implements Controller {
             this._submarines,
             UnitType.Submarine,
             "submarine",
+            "",
+          )}
+          ${this.renderUnitItem(
+            destroyerIcon,
+            this._destroyers,
+            UnitType.Destroyer,
+            "destroyer",
             "",
           )}
           ${this.renderUnitItem(
@@ -293,6 +304,7 @@ export class UnitDisplay extends LitElement implements Controller {
                 break;
               case UnitType.Warship:
               case UnitType.Submarine:
+              case UnitType.Destroyer:
                 this.eventBus?.emit(new ToggleStructureEvent([UnitType.Port]));
                 break;
               default:

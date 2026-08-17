@@ -20,6 +20,7 @@ export class MoveWarshipExecution implements Execution {
       [
         ...this.owner.units(UnitType.Warship),
         ...this.owner.units(UnitType.Submarine),
+        ...this.owner.units(UnitType.Destroyer),
       ].map((u) => [u.id(), u]),
     );
     // Deduplicate ids so each ship is only moved once
@@ -41,6 +42,10 @@ export class MoveWarshipExecution implements Execution {
         ship.updateSubmarineState({
           patrolTile: this.position,
           kamikazeTargetId: undefined,
+        });
+      } else if (ship.type() === UnitType.Destroyer) {
+        ship.updateDestroyerState({
+          patrolTile: this.position,
         });
       } else {
         ship.updateWarshipState({

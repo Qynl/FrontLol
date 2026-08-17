@@ -1,6 +1,7 @@
 import { simpleHash, toInt, withinInt } from "../Util";
 import {
   AllUnitParams,
+  DestroyerState,
   MessageType,
   NukeState,
   Player,
@@ -29,6 +30,7 @@ export class UnitImpl implements Unit {
   private _transportShipState: TransportShipState | undefined = undefined;
   private _warshipState: WarshipState | undefined = undefined;
   private _submarineState: SubmarineState | undefined = undefined;
+  private _destroyerState: DestroyerState | undefined = undefined;
   private _nukeState: NukeState | undefined = undefined;
   private _reachedTarget = false;
   private _wasDestroyedByEnemy: boolean = false;
@@ -81,6 +83,11 @@ export class UnitImpl implements Unit {
           state: "patrolling",
           patrolTile: params.patrolTile,
         };
+      } else if (this._type === UnitType.Destroyer) {
+        this._destroyerState = {
+          state: "patrolling",
+          patrolTile: params.patrolTile,
+        };
       } else {
         this._warshipState = {
           state: "patrolling",
@@ -100,6 +107,7 @@ export class UnitImpl implements Unit {
     switch (this._type) {
       case UnitType.Warship:
       case UnitType.Submarine:
+      case UnitType.Destroyer:
       case UnitType.Port:
       case UnitType.MissileSilo:
       case UnitType.DefensePost:
@@ -156,6 +164,10 @@ export class UnitImpl implements Unit {
       submarineState:
         this._submarineState !== undefined
           ? { ...this.submarineState() }
+          : undefined,
+      destroyerState:
+        this._destroyerState !== undefined
+          ? { ...this.destroyerState() }
           : undefined,
       transportShipState:
         this._transportShipState !== undefined
@@ -228,6 +240,7 @@ export class UnitImpl implements Unit {
     this.clearPendingDeletion();
     switch (this._type) {
       case UnitType.Warship:
+      case UnitType.Destroyer:
       case UnitType.Port:
       case UnitType.MissileSilo:
       case UnitType.DefensePost:
@@ -349,6 +362,7 @@ export class UnitImpl implements Unit {
         case UnitType.Port:
         case UnitType.SAMLauncher:
         case UnitType.Warship:
+        case UnitType.Destroyer:
         case UnitType.Factory:
           this.mg.stats().unitDestroy(destroyer, this._type);
           this.mg.stats().unitLose(this.owner(), this._type);
@@ -421,6 +435,33 @@ export class UnitImpl implements Unit {
       state: merged.state,
       patrolTile: merged.patrolTile,
       kamikazeTargetId: merged.kamikazeTargetId,
+      isInCombat: merged.isInCombat,
+    };
+    this.mg.addUpdate(this.toUpdate());
+  }
+
+  destroyerState(): DestroyerState {
+    if (this._destroyerState === undefined) {
+      throw new Error("destroyerState called on non-destroyer unit");
+    }
+    return this._destroyerState;
+  }
+
+  updateDestroyerState(update: Partial<DestroyerState>): void {
+    if (this._destroyerState === undefined) {
+      throw new Error("updateDestroyerState called on non-destroyer unit");
+    }
+    const merged = { ...this._destroyerState, ...update };
+    if (
+      merged.state === this._destroyerState.state &&
+      merged.patrolTile === this._destroyerState.patrolTile &&
+      merged.isInCombat === this._destroyerState.isInCombat
+    ) {
+      return;
+    }
+    this._destroyerState = {
+      state: merged.state,
+      patrolTile: merged.patrolTile,
       isInCombat: merged.isInCombat,
     };
     this.mg.addUpdate(this.toUpdate());

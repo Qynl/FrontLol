@@ -128,7 +128,9 @@
       "port": "Sends trade ships to generate gold",
       "sam_launcher": "Defends against incoming nukes",
       "submarine": "Crashes into a targeted warship, sinking both",
-      "warship": "Captures trade ships, destroys ships and boats"
+      "destroyer": "Hunts submarines, then shoots enemy ships",
+      "warship": "Captures trade ships, destroys ships and boats",
+      "water_troops": "Warship, submarine and destroyer"
     },
     "not_enough_money": "Not enough money",
     "upgrade_amount": "x{amount}",
@@ -1698,6 +1700,7 @@
     "port": "Port",
     "sam_launcher": "SAM Launcher",
     "submarine": "Submarine",
+    "destroyer": "Destroyer",
     "warship": "Warship"
   },
   "user_setting": {

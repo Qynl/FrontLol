@@ -52,6 +52,12 @@ export type SubmarineState = {
   isInCombat?: boolean;
 };
 
+export type DestroyerState = {
+  state: "patrolling" | "hunting";
+  patrolTile?: TileRef;
+  isInCombat?: boolean;
+};
+
 export type NukeState = {
   trajectory: TrajectoryTile[];
   trajectoryIndex: number;
@@ -195,6 +201,7 @@ export enum UnitType {
   TransportShip = "Transport",
   Warship = "Warship",
   Submarine = "Submarine",
+  Destroyer = "Destroyer",
   Shell = "Shell",
   SAMMissile = "SAMMissile",
   Port = "Port",
@@ -230,6 +237,7 @@ export const BuildableAttacks = unitTypeGroup([
   UnitType.MIRV,
   UnitType.Warship,
   UnitType.Submarine,
+  UnitType.Destroyer,
 ] as const);
 
 export const Structures = unitTypeGroup([
@@ -272,6 +280,10 @@ export interface UnitParamsMap {
   };
 
   [UnitType.Submarine]: {
+    patrolTile: TileRef;
+  };
+
+  [UnitType.Destroyer]: {
     patrolTile: TileRef;
   };
 
@@ -520,6 +532,8 @@ export interface Unit {
   updateWarshipState(update: Partial<WarshipState>): void;
   submarineState(): SubmarineState;
   updateSubmarineState(update: Partial<SubmarineState>): void;
+  destroyerState(): DestroyerState;
+  updateDestroyerState(update: Partial<DestroyerState>): void;
   transportShipState(): TransportShipState;
   updateTransportShipState(update: Partial<TransportShipState>): void;
   nukeState(): NukeState;

@@ -16,7 +16,12 @@ import type { Config } from "../../../../core/configuration/Config";
 import { UnitType } from "../../../../core/game/Game";
 import { maxHealthWithVeterancy } from "../../../../core/game/Veterancy";
 import type { RendererConfig, UnitState } from "../../types";
-import { UT_MISSILE_SILO, UT_SAM_LAUNCHER, UT_SUBMARINE } from "../../types";
+import {
+  UT_DESTROYER,
+  UT_MISSILE_SILO,
+  UT_SAM_LAUNCHER,
+  UT_SUBMARINE,
+} from "../../types";
 import type { RenderSettings } from "../RenderSettings";
 import { createProgram } from "../utils/GlUtils";
 
@@ -66,6 +71,7 @@ export class BarPass {
   private mapW: number;
   private warshipMaxHealth: number;
   private submarineMaxHealth: number;
+  private destroyerMaxHealth: number;
   private veterancyHealthBonus: number;
 
   constructor(
@@ -79,6 +85,7 @@ export class BarPass {
     this.mapW = header.mapWidth;
     this.warshipMaxHealth = config.unitInfo(UnitType.Warship).maxHealth ?? 0;
     this.submarineMaxHealth = config.unitInfo(UnitType.Submarine).maxHealth ?? 0;
+    this.destroyerMaxHealth = config.unitInfo(UnitType.Destroyer).maxHealth ?? 0;
     this.veterancyHealthBonus = config.warshipVeterancyHealthBonus();
 
     // --- Shader program ---
@@ -151,7 +158,9 @@ export class BarPass {
       const baseMaxHealth =
         unit.unitType === UT_SUBMARINE
           ? this.submarineMaxHealth
-          : this.warshipMaxHealth;
+          : unit.unitType === UT_DESTROYER
+            ? this.destroyerMaxHealth
+            : this.warshipMaxHealth;
       const maxHealth = maxHealthWithVeterancy(
         baseMaxHealth,
         unit.veterancy,

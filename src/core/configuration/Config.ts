@@ -384,6 +384,15 @@ export class Config {
           maxHealth: 800,
         };
         break;
+      case UnitType.Destroyer:
+        info = {
+          cost: this.costWrapper(
+            (numUnits: number) => Math.min(1_000_000, (numUnits + 1) * 225_000),
+            UnitType.Destroyer,
+          ),
+          maxHealth: 900,
+        };
+        break;
       case UnitType.Shell:
         info = {
           cost: () => 0n,
@@ -1056,6 +1065,26 @@ export class Config {
   /** Tiles a submarine moves per tick (warships move 1, so this is "faster"). */
   submarineMovePerTick(): number {
     return 2;
+  }
+
+  // --- Destroyer ---
+
+  destroyerPatrolRange(): number {
+    return 100;
+  }
+
+  /** Range at which a destroyer acquires targets (submarines first). */
+  destroyerTargettingRange(): number {
+    return 110;
+  }
+
+  /** Tiles a destroyer moves per tick (same speed as a submarine). */
+  destroyerMovePerTick(): number {
+    return 2;
+  }
+
+  destroyerShellAttackRate(): number {
+    return 25;
   }
 
   // --- Warship veterancy ---

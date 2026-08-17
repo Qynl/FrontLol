@@ -1,4 +1,5 @@
 import {
+  DestroyerState,
   NukeState,
   SubmarineState,
   Tick,
@@ -112,6 +113,7 @@ export class UnitView {
   /** Engine-only fields not in UnitState. Use warshipState() / submarineState() / transportShipState() to read. */
   private _warshipState?: WarshipState;
   private _submarineState?: SubmarineState;
+  private _destroyerState?: DestroyerState;
   private _transportShipState?: TransportShipState;
   private _nukeState?: NukeState;
   private _createdAt: Tick;
@@ -123,6 +125,7 @@ export class UnitView {
     this.state = unitStateFromUpdate(data);
     this._warshipState = data.warshipState;
     this._submarineState = data.submarineState;
+    this._destroyerState = data.destroyerState;
     this._transportShipState = data.transportShipState;
     this._nukeState = data.nukeState;
     this.lastPos.push(data.pos);
@@ -158,6 +161,7 @@ export class UnitView {
     applyUpdateInPlace(this.state, data);
     this._warshipState = data.warshipState;
     this._submarineState = data.submarineState;
+    this._destroyerState = data.destroyerState;
     this._transportShipState = data.transportShipState;
     this._nukeState = data.nukeState;
     // constructionStartTick: set on transition into underConstruction.
@@ -219,8 +223,21 @@ export class UnitView {
   updateSubmarineState(_update: Partial<SubmarineState>): void {
     throw new Error("updateSubmarineState is not supported on UnitView");
   }
+  destroyerState(): DestroyerState {
+    if (this._destroyerState === undefined) {
+      throw new Error("destroyerState called on non-destroyer unit");
+    }
+    return this._destroyerState;
+  }
+  updateDestroyerState(_update: Partial<DestroyerState>): void {
+    throw new Error("updateDestroyerState is not supported on UnitView");
+  }
   isInCombat(): boolean {
-    return this._warshipState?.isInCombat ?? false;
+    return (
+      this._warshipState?.isInCombat ??
+      this._destroyerState?.isInCombat ??
+      false
+    );
   }
   touch(): void {
     throw new Error("touch is not supported on UnitView");

@@ -185,6 +185,28 @@ export class WarshipSelectionController implements Controller {
   }
 
   /**
+   * Find player-owned destroyers near the given cell, sorted by distance.
+   */
+  private findDestroyersNearCell(clickRef: TileRef): UnitView[] {
+    const myPlayer = this.game.myPlayer();
+    if (!myPlayer) return [];
+    return this.game
+      .units(UnitType.Destroyer)
+      .filter(
+        (unit) =>
+          unit.isActive() &&
+          unit.owner() === myPlayer &&
+          this.game.manhattanDist(unit.tile(), clickRef) <=
+            WARSHIP_SELECTION_RADIUS,
+      )
+      .sort(
+        (a, b) =>
+          this.game.manhattanDist(a.tile(), clickRef) -
+          this.game.manhattanDist(b.tile(), clickRef),
+      );
+  }
+
+  /**
    * Find enemy warships near the given cell (kamikaze targets), sorted by
    * distance. Own warships are excluded.
    */
@@ -268,6 +290,11 @@ export class WarshipSelectionController implements Controller {
     const nearbySubmarines = this.findSubmarinesNearCell(clickRef);
     if (nearbySubmarines.length > 0) {
       this.eventBus.emit(new UnitSelectionEvent(nearbySubmarines[0], true));
+      return;
+    }
+    const nearbyDestroyers = this.findDestroyersNearCell(clickRef);
+    if (nearbyDestroyers.length > 0) {
+      this.eventBus.emit(new UnitSelectionEvent(nearbyDestroyers[0], true));
     }
   }
 
@@ -299,7 +326,8 @@ export class WarshipSelectionController implements Controller {
     }
     const hasShipNearby =
       this.findWarshipsNearCell(clickRef).length > 0 ||
-      this.findSubmarinesNearCell(clickRef).length > 0;
+      this.findSubmarinesNearCell(clickRef).length > 0 ||
+      this.findDestroyersNearCell(clickRef).length > 0;
     if (hasShipNearby) {
       this.onMouseUp(new MouseUpEvent(event.x, event.y), clickRef);
     } else {

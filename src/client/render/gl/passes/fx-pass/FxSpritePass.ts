@@ -11,6 +11,7 @@ import type { ConquestFx, DeadUnitFx, RendererConfig } from "../../../types";
 import {
   STRUCTURE_TYPES,
   UT_ATOM_BOMB,
+  UT_DESTROYER,
   UT_HYDROGEN_BOMB,
   UT_MIRV_WARHEAD,
   UT_SHELL,
@@ -367,7 +368,7 @@ export class FxSpritePass {
       return;
     }
 
-    if (typeName === UT_WARSHIP) {
+    if (typeName === UT_WARSHIP || typeName === UT_DESTROYER) {
       this.pushFx(x, y, FX_UNIT_EXPLOSION, now);
       this.pushFx(x, y, FX_SINKING_SHIP, now);
       return;

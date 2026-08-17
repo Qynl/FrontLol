@@ -27,6 +27,8 @@ import { UIState } from "../../UIState";
 import { renderNumber } from "../../Utils";
 import { GameView } from "../../view";
 const warshipIcon = assetUrl("images/BattleshipIconWhite.svg");
+const destroyerIcon = assetUrl("images/DestroyerIconWhite.svg");
+const waterTroopsIcon = assetUrl("images/WaterTroopsIconWhite.svg");
 const cityIcon = assetUrl("images/CityIconWhite.svg");
 const factoryIcon = assetUrl("images/FactoryIconWhite.svg");
 const goldCoinIcon = assetUrl("images/GoldCoinIcon.svg");
@@ -45,6 +47,9 @@ export interface BuildItemDisplay {
   description?: string;
   key?: string;
   countable?: boolean;
+  /** True when this button opens the nested water-troop sub-menu instead of
+   *  building the anchor unit directly. */
+  gateway?: boolean;
 }
 
 export const buildTable: BuildItemDisplay[][] = [
@@ -71,11 +76,12 @@ export const buildTable: BuildItemDisplay[][] = [
       countable: false,
     },
     {
-      unitType: UnitType.Warship,
-      icon: warshipIcon,
-      description: "build_menu.desc.warship",
-      key: "unit_type.warship",
-      countable: true,
+      unitType: UnitType.Warship, // anchor for the water-troop sub-menu
+      icon: waterTroopsIcon,
+      description: "build_menu.desc.water_troops",
+      key: "build_menu.water_troops",
+      countable: false,
+      gateway: true,
     },
     {
       unitType: UnitType.Port,
@@ -141,6 +147,13 @@ export const waterBuildTable: BuildItemDisplay[] = [
     icon: submarineIcon,
     description: "build_menu.desc.submarine",
     key: "unit_type.submarine",
+    countable: true,
+  },
+  {
+    unitType: UnitType.Destroyer,
+    icon: destroyerIcon,
+    description: "build_menu.desc.destroyer",
+    key: "unit_type.destroyer",
     countable: true,
   },
 ];
@@ -477,11 +490,11 @@ export class BuildMenu extends LitElement implements Controller {
             if (buildableUnit === undefined) {
               return html``;
             }
-            // The warship button is the gateway into the water-troop
-            // sub-menu, so it must stay clickable even when no ship can be
-            // built on the clicked tile yet (land, or no port). Buildability
-            // is enforced on the individual buttons inside the sub-menu.
-            const isWaterGateway = item.unitType === UnitType.Warship;
+            // The water-troop button is the gateway into the nested sub-menu,
+            // so it must stay clickable even when no ship can be built on the
+            // clicked tile yet (land, or no port). Buildability is enforced on
+            // the individual buttons inside the sub-menu.
+            const isWaterGateway = item.gateway === true;
             const enabled =
               isWaterGateway ||
               buildableUnit.canBuild !== false ||
@@ -545,6 +558,17 @@ export class BuildMenu extends LitElement implements Controller {
   }
 
   private renderItemBody(item: BuildItemDisplay) {
+    // Gateways are category buttons (e.g. "Water Troops"), not buildable
+    // units, so they show no cost or count.
+    if (item.gateway) {
+      return html`
+        <img src=${item.icon} alt="${item.unitType}" width="40" height="40" />
+        <span class="build-name">${item.key && translateText(item.key)}</span>
+        <span class="build-description"
+          >${item.description && translateText(item.description)}</span
+        >
+      `;
+    }
     return html`
       <img src=${item.icon} alt="${item.unitType}" width="40" height="40" />
       <span class="build-name">${item.key && translateText(item.key)}</span>
@@ -573,8 +597,8 @@ export class BuildMenu extends LitElement implements Controller {
     item: BuildItemDisplay,
     buildableUnit: BuildableUnit,
   ) {
-    // The warship button opens the nested water-troop menu.
-    if (item.unitType === UnitType.Warship) {
+    // The water-troop button opens the nested water-troop menu.
+    if (item.gateway) {
       this.waterMenuOpen = true;
       return;
     }
